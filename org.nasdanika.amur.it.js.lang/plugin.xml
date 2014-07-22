@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="urn:org.nasdanika.amur.it.js.lang"
+            class="org.nasdanika.amur.it.js.lang.LangPackage"
+            genModel="model/Lang.genmodel"/>
+   </extension>
+   <extension
+         point="org.nasdanika.amur.lang.language">
+      <language
+            class="org.nasdanika.amur.it.js.lang.impl.JavaScriptImpl"
+            description="JavaScript"
+            id="javascript"
+            name="JavaScript">
+      </language>
+      <language
+            class="org.nasdanika.amur.it.js.lang.impl.HTMLImpl"
+            id="html"
+            name="HTML"
+            url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:languages:html">
+      </language>
+      <language
+            class="org.nasdanika.amur.it.js.lang.impl.TextImpl"
+            id="text"
+            name="Text"
+            url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:languages:text">
+      </language>
+   </extension>
+   <extension
+         point="org.nasdanika.amur.lang.translator">
+      <translator
+            class="org.nasdanika.amur.it.js.lang.impl.TextToJavaScriptTranslator"
+            source="html"
+            target="javascript">
+      </translator>
+      <translator
+            class="org.nasdanika.amur.it.js.lang.impl.TextToJavaScriptTranslator"
+            source="text"
+            target="javascript">
+      </translator>
+   </extension>
+   <extension
+         point="org.nasdanika.common.HtmlRenderer">
+      <html_renderer
+            class="org.nasdanika.amur.it.js.lang.impl.TextSourceHtmlRenderer">
+      </html_renderer>
+   </extension>
+
+</plugin>
