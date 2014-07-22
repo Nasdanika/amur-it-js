@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+   <extension
+         point="org.nasdanika.amur.edit.implementation_type">
+      <category
+            description="JavaScript implementation types"
+            id="JavaScript"
+            name="JavaScript">
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.TopLevelFlowImpl"
+               description="Top level flow contains other elements connected to each other."
+               icon="icons/full/obj16/process.png"
+               id="org.nasdanika.amur.it.js.foundation.TopLevelFlow"
+               name="Top Level Flow"
+               target="org.nasdanika.amur.Node"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:top_level_flow">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.SubFlowImpl"
+               description="Sub-flow is a node that contains other elements connected to each other and has a sub-diagram"
+               icon="icons/add_sub_task.png"
+               id="org.nasdanika.amur.it.js.foundation.SubFlow"
+               name="Sub-flow"
+               target="org.nasdanika.amur.Node"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:sub_flow">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.FunctionInputPortImpl"
+               description="Function Input Port is bound to the facade object as a function. When client code invokes the function the port&apos;s handler code is executed."
+               icon="icons/full/obj16/FunctionInputPort.gif"
+               id="org.nasdanika.amur.it.js.foundation.FunctionInputPort"
+               name="Function Input Port"
+               target="org.nasdanika.amur.InputPort"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:function_input_port">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.PropertyInputPortImpl"
+               description="Property Input Port is bound to the facade as a property. Port&apos;s accessor is executed when client code reads the facade property and port&apos;s mutator is executed when client code modifies the property."
+               icon="icons/full/obj16/PropertyInputPort.gif"
+               id="org.nasdanika.amur.it.js.foundation.PropertyInputPort"
+               name="Property Input Port"
+               target="org.nasdanika.amur.InputPort"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:property_input_port">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.FunctionOutputPortImpl"
+               description="The port invokes facade&apos;s function with the same name as port&apos;s."
+               icon="icons/full/obj16/FunctionOutputPort.gif"
+               id="org.nasdanika.amur.it.js.foundation.FunctionOutputPort"
+               name="Function Output Port"
+               target="org.nasdanika.amur.OutputPort"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:function_output_port">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.PropertyOutputPortImpl"
+               description="Property Output Port provides access to a facade property."
+               icon="icons/full/obj16/PropertyOutputPort.gif"
+               id="org.nasdanika.amur.it.js.foundation.PropertyOutputPort"
+               name="Property Output Port"
+               target="org.nasdanika.amur.OutputPort"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:property_output_port">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ActivityImpl"
+               description="Activity is a default implementation type for Node notation element in Top Level Flow. It is a basic processing node. Its handler is executed when the activity receives an invocation from one of inputs. Handler code has access to activity outputs, which it invokes to perform its task."
+               icon="icons/full/obj16/script_gear.png"
+               id="org.nasdanika.amur.it.js.foundation.Activity"
+               name="Activity"
+               selector="target.getParent()!=null"
+               target="org.nasdanika.amur.Node"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:activity">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.CallImpl"
+               description="Function call which is executed synchronously and may return value."
+               icon="icons/full/obj16/Call.gif"
+               id="org.nasdanika.amur.it.js.foundation.Call"
+               name="Call"
+               target="org.nasdanika.amur.Call"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:call">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ErrorHandlerImpl"
+               description="Handles errors thrown by flow components and not handled by error transitions."
+               icon="icons/full/obj16/cancel.png"
+               id="org.nasdanika.amur.it.js.foundation.ErrorHandler"
+               name="Error Handler"
+               target="org.nasdanika.amur.ErrorHandler"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:error_handler">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ErrorTransitionImpl"
+               description="Handles errors thrown by the source node."
+               icon="icons/full/obj16/ErrorTransition.gif"
+               id="org.nasdanika.amur.it.js.foundation.ErrorTransition"
+               name="Error Transition"
+               target="org.nasdanika.amur.ErrorTransition"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:error_transition">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ReferenceImpl"
+               description="Reference to an object or object property"
+               icon="icons/full/obj16/Reference.gif"
+               id="org.nasdanika.amur.it.js.foundation.Reference"
+               name="Reference"
+               target="org.nasdanika.amur.Reference"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:reference">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ScheduledTransitionImpl"
+               description="Transition which can be scheduled to be executed with a specified delay or interval"
+               icon="icons/full/obj16/ScheduledTransition.gif"
+               id="org.nasdanika.amur.it.js.foundation.ScheduledTransition"
+               name="Scheduled transition"
+               target="org.nasdanika.amur.Transition"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:scheduled_transition">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.TransitionImpl"
+               description="Transition is a function call which is executed asynchronously. Transition&apos;s return value is a promise, which is fulfilled with the target function&apos;s return value."
+               icon="icons/full/obj16/Transition.gif"
+               id="org.nasdanika.amur.it.js.foundation.Transition"
+               name="Transition"
+               target="org.nasdanika.amur.Transition"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:transition">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.EventListenerImpl"
+               description="Listens for events posted by $emitEvent()"
+               icon="icons/full/obj16/ear_listen.png"
+               id="org.nasdanika.amur.it.js.foundation.EventListener"
+               name="Event listener"
+               target="org.nasdanika.amur.ConnectionSource"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:event_listener">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.SuiteImpl"
+               description="A helper implementation type for grouping Amur models, e.g. for batch generation."
+               icon="icons/full/obj16/drawer.png"
+               id="org.nasdanika.amur.it.js.foundation.Suite"
+               name="Suite"
+               selector="!target.getParent()"
+               target="org.nasdanika.amur.Node"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:suite">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ObjectNodeImpl"
+               description="This node &quot;wires&quot; external object into the flow."
+               icon="icons/object.png"
+               id="org.nasdanika.amur.it.js.foundation.ObjectNode"
+               name="Object Node"
+               selector="target.getParent()!=null"
+               target="org.nasdanika.amur.Node"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:object_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ObjectNodeImpl"
+               description="This node &quot;wires&quot; external object into the flow."
+               icon="icons/object.png"
+               id="org.nasdanika.amur.it.js.foundation.ObjectNode"
+               name="Object Node"
+               selector="target.getParent()!=null"
+               target="org.nasdanika.amur.ConnectionSource"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:object_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.ObjectNodeImpl"
+               description="This node &quot;wires&quot; external object into the flow."
+               icon="icons/object.png"
+               id="org.nasdanika.amur.it.js.foundation.ObjectNode"
+               name="Object Node"
+               selector="target.getParent()!=null"
+               target="org.nasdanika.amur.ConnectionTarget"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:object_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.UserTaskImpl"
+               description="User (actor) interaction node which combines presentation, validation, and action steps."
+               icon="icons/user.png"
+               id="org.nasdanika.amur.it.js.foundation.UserTask"
+               name="User Task"
+               selector="target.getParent()!=null"
+               target="org.nasdanika.amur.Node"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:user_task">
+         </implementation_type>
+      </category>
+      <category
+            description="Implementation types for conceptual modeling"
+            id="conceptual"
+            name="Conceptual">
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.GenericNodeImpl"
+               description="A node for conceptual modeling with customizable icon and image."
+               icon="icons/full/obj16/GenericNode.gif"
+               id="org.nasdanika.amur.it.js.foundation.GenericNode"
+               name="Generic Node"
+               target="org.nasdanika.amur.Node"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.GenericNodeImpl"
+               description="A node for conceptual modeling with customizable icon and image."
+               icon="icons/full/obj16/GenericNode.gif"
+               id="org.nasdanika.amur.it.js.foundation.GenericNode"
+               name="Generic Node"
+               target="org.nasdanika.amur.InputPort"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.GenericNodeImpl"
+               description="A node for conceptual modeling with customizable icon and image."
+               icon="icons/full/obj16/GenericNode.gif"
+               id="org.nasdanika.amur.it.js.foundation.GenericNode"
+               name="Generic Node"
+               target="org.nasdanika.amur.OutputPort"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.GenericContainerImpl"
+               description="Generic container with customizable icon."
+               icon="icons/full/obj16/GenericContainer.gif"
+               id="org.nasdanika.amur.it.js.foundation.GenericContainer"
+               name="Generic Container"
+               target="org.nasdanika.amur.Container"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_container">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.GenericNodeImpl"
+               description="A node for conceptual modeling with customizable icon and image."
+               icon="icons/full/obj16/GenericNode.gif"
+               id="org.nasdanika.amur.it.js.foundation.GenericNode"
+               name="Generic Node"
+               target="org.nasdanika.amur.ConnectionSource"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.GenericNodeImpl"
+               description="A node for conceptual modeling with customizable icon and image."
+               icon="icons/full/obj16/GenericNode.gif"
+               id="org.nasdanika.amur.it.js.foundation.GenericNode"
+               name="Generic Node"
+               target="org.nasdanika.amur.ConnectionTarget"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_node">
+         </implementation_type>
+         <implementation_type
+               class="org.nasdanika.amur.it.js.foundation.impl.GenericNodeImpl"
+               description="A node for conceptual modeling with customizable icon and image."
+               icon="icons/full/obj16/GenericNode.gif"
+               id="org.nasdanika.amur.it.js.foundation.GenericNode"
+               name="Generic Node"
+               target="org.nasdanika.amur.ErrorHandler"
+               url="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_node">
+         </implementation_type>
+      </category>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated foundation -->
+      <factory
+            uri="urn:org.nasdanika.amur.it.js.foundation"
+            class="org.nasdanika.amur.it.js.foundation.provider.FoundationItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+</plugin>
