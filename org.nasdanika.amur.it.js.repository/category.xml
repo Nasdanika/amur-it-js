@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.nasdanika.amur.it.js.feature_1.0.0.qualifier.jar" id="org.nasdanika.amur.it.js.feature" version="1.0.0.qualifier">
+      <category name="org.nasdanika.amur.it.js.category"/>
+   </feature>
+   <feature url="features/org.nasdanika.amur.it.js.foundation.tests.feature_1.0.0.qualifier.jar" id="org.nasdanika.amur.it.js.foundation.tests.feature" version="1.0.0.qualifier">
+      <category name="org.nasdanika.amur.it.js.category"/>
+   </feature>
+   <category-def name="org.nasdanika.amur.it.js.category" label="Amur JS">
+      <description>
+         Amur for JavaScript.
+      </description>
+   </category-def>
+</site>
