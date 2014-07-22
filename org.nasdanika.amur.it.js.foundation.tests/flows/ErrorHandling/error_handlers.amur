@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_XMR1sCLeEeOqFe-fpl6Yvg" name="ErrorHandlersFlow" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_g01fk_2r">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_uv87YCLeEeOqFe-fpl6Yvg" name="Top Level Flow" id="org.nasdanika.amur.it.js.TopLevelFlow" description="Top level flow contains other elements connected to each other." errorHandlersOrder="_BIZ5YCLfEeOqFe-fpl6Yvg _GZsM0CLfEeOqFe-fpl6Yvg" scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows/ErrorHandling" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows/ErrorHandling" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js">
+    <declarations xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_8hrhsCLlEeOd5Ih7MRSyFA" text="">
+      <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_8hrhsSLlEeOd5Ih7MRSyFA" name="JavaScript" uid="javascript"/>
+    </declarations>
+  </implementationType>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_3zsz0CLeEeOqFe-fpl6Yvg" name="o1" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_g4qbm_2x" inboundConnections="_8UooYCLeEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_3zupACLeEeOqFe-fpl6Yvg">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_6ORfMCLmEeOd5Ih7MRSyFA" name="error"/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_4_USYCLeEeOqFe-fpl6Yvg" name="i1" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_g4wfv_2y" outboundConnections="_8UooYCLeEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_4_USYSLeEeOqFe-fpl6Yvg">
+      <declarations xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_LGM7ECLmEeOd5Ih7MRSyFA" text="myVar : 88">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_LGM7ESLmEeOd5Ih7MRSyFA" name="JavaScript" uid="javascript"/>
+      </declarations>
+      <start xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_dRPNQKAbEeOsre8jzMi50A" editor="RSyntax" text="// Start is executed in start invocation context with component being context's prototype.&#xA;// Therefore we have to use prototype access to modify myVar, but we can use this. access to read it.&#xA;Object.getPrototypeOf(this).myVar+=12;&#xA;equal(this.myVar, 100, &quot;Instance variable initialization&quot;);&#xA;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_dRPNQaAbEeOsre8jzMi50A" name="JavaScript" uid="javascript"/>
+      </start>
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="__YunUCLlEeOd5Ih7MRSyFA" name="arg0"/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_5-9xYC4qEeO1_e8A1UHI3Q" text="equal(this.myVar, 100, &quot;Instance variable&quot;);&#xA;throw arg0+this.myVar;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_5-9xYS4qEeO1_e8A1UHI3Q" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:ErrorTransition" xmi:id="_8UooYCLeEeOqFe-fpl6Yvg" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_g5dp7_2z" source="_4_USYCLeEeOqFe-fpl6Yvg" target="_3zsz0CLeEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ErrorTransition" xmi:id="_8UpPcCLeEeOqFe-fpl6Yvg">
+      <condition xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_QnLlcCLoEeOd5Ih7MRSyFA" text="error == &quot;et1100&quot;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_QnLlcSLoEeOd5Ih7MRSyFA" name="JavaScript" uid="javascript"/>
+      </condition>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:ErrorHandler" xmi:id="_BIZ5YCLfEeOqFe-fpl6Yvg" name="Conditional" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_g62lm_34">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ErrorHandler" xmi:id="_BIbHgCLfEeOqFe-fpl6Yvg">
+      <condition xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_djOtYC4mEeO1_e8A1UHI3Q" text="error == &quot;eh2100&quot;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_djOtYS4mEeO1_e8A1UHI3Q" name="JavaScript" uid="javascript"/>
+      </condition>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_2n5BsC5HEeOZz_3SvS-ZUQ" text="equal(error, &quot;eh2100&quot;, &quot;Conditional handler&quot;);&#xA;return &quot;ch&quot;; // Handled">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_2n5BsS5HEeOZz_3SvS-ZUQ" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:ErrorHandler" xmi:id="_GZsM0CLfEeOqFe-fpl6Yvg" name="Unconditional" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_g6tw2_3a">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ErrorHandler" xmi:id="_GZsM0SLfEeOqFe-fpl6Yvg">
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_GuuokC4rEeO1_e8A1UHI3Q" text="equal(error, &quot;ue100&quot;, &quot;Unconditional handler&quot;);&#xA;return &quot;uh&quot;; // Handled&#xA;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_GuuokS4rEeO1_e8A1UHI3Q" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

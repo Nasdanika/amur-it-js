@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_5NEqYD6REeOe9pLbI6ITlQ" name="Events" id="32TY_N1HG_ZNE8_K1S7_W4EZ_EEMC_8GFL_E71T_3r27_j">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_6-1i8D6REeOe9pLbI6ITlQ" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_5zvo0D6REeOe9pLbI6ITlQ" name="i1" id="32TY_N1HG_ZNE8_K1S7_W4EZ_EEMC_8GFL_E71T_3u6u_m">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_6-1i8T6REeOe9pLbI6ITlQ">
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_lUMmAD6SEeOe9pLbI6ITlQ" text="return this.$emitEvent(&quot;Hello&quot;, 2013);">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_lUMmAT6SEeOe9pLbI6ITlQ" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:ConnectionSource" xmi:id="_-Q5woD6REeOe9pLbI6ITlQ" name="el 1" id="32TY_N1HG_ZNE8_K1S7_W4EZ_EEMC_8GFL_E71T_4h9f_n">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:EventListener" xmi:id="__RdOsD6REeOe9pLbI6ITlQ" name="Event listener" id="org.nasdanika.amur.it.js.foundation.EventListener" description="Listens for events posted by $emitEvent()">
+      <condition xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_JO-nwD6SEeOe9pLbI6ITlQ" text="typeof event == &quot;string&quot;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_JO-nwT6SEeOe9pLbI6ITlQ" name="JavaScript" uid="javascript"/>
+      </condition>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_e6uigD6SEeOe9pLbI6ITlQ" text="equal(event, &quot;Hello&quot;, &quot;Hello event received&quot;);&#xA;return &quot;How are you?&quot;;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_e6uigT6SEeOe9pLbI6ITlQ" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:ConnectionSource" xmi:id="_BwTPsD6SEeOe9pLbI6ITlQ" name="el 2" id="32TY_N1HG_ZNE8_K1S7_W4EZ_EEMC_8GFL_E71T_4zc4_o">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:EventListener" xmi:id="_DRyQkD6SEeOe9pLbI6ITlQ" name="Event listener" id="org.nasdanika.amur.it.js.foundation.EventListener" description="Listens for events posted by $emitEvent()">
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_ZimnQD6SEeOe9pLbI6ITlQ" text="ok(event == &quot;Hello&quot; || event == 2013, &quot;Event received: &quot;+event);&#xA;return &quot;Event_&quot;+event;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_ZimnQT6SEeOe9pLbI6ITlQ" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

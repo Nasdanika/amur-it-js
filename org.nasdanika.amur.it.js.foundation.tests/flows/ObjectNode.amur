@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_I_jVIKWfEeOmTtBk4-fpFw" name="ObjectNodeFlow" description="&#xD;&#xA;    &lt;p style=&quot;margin-top: 0&quot;>&#xD;&#xA;      This flow demonstrates use of ObjectNode implementation types. There are &#xD;&#xA;      two object nodes - one binds to a button at a flow scope and the other &#xD;&#xA;      to a div at invocation scope. When button is clicked, the div content is &#xD;&#xA;      updated with current time.&#xD;&#xA;    &lt;/p>&#xD;&#xA;  " id="KS88_C772_GBWF_XW6V_32RZ_3FFV_WGKZ_LKAR_ajkq_2j">
+  <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_KcAsEKWfEeOmTtBk4-fpFw" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="../WebContent/js/flows"/>
+  <children xsi:type="org.nasdanika.amur:ConnectionSource" xmi:id="_LSircKWfEeOmTtBk4-fpFw" name="Button" description="&#xD;&#xA;    &lt;p style=&quot;margin-top: 0&quot;>&#xD;&#xA;      This object node binds to a button with &lt;tt>time_button&lt;/tt> id at flow &#xD;&#xA;      start time. Button's &lt;tt>onclick&lt;/tt> handler is set to activate a call &#xD;&#xA;      to &lt;tt>Controller&lt;/tt> activity.&#xD;&#xA;    &lt;/p>&#xD;&#xA;  " id="KS88_C772_GBWF_XW6V_32RZ_3FFV_WGKZ_LKAR_avgv_2m" outboundConnections="_PqBCAKWfEeOmTtBk4-fpFw">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:ObjectNode" xmi:id="_NO2nIKWfEeOmTtBk4-fpFw" name="Object Node" id="org.nasdanika.amur.it.js.foundation.ObjectNode" description="This node &quot;wires&quot; external object into the flow." scope="Component">
+      <selector xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_VNkfQKWhEeOUVZ-Bupewzg" editor="RSyntax" text="document.getElementById('time_button')">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_VNkfQaWhEeOUVZ-Bupewzg" name="JavaScript" uid="javascript"/>
+      </selector>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:ConnectionTarget" xmi:id="_Lx0ocKWfEeOmTtBk4-fpFw" name="Div" description="&#xD;&#xA;    &lt;p style=&quot;margin-top: 0&quot;>&#xD;&#xA;      This object node is bound to html element with &lt;tt>time_div&lt;/tt> id. &#xD;&#xA;      Binding scope is &lt;tt>Invocation&lt;/tt> - this type of binding allows to &#xD;&#xA;      dynamically select object node for each invocation instead of selecting &#xD;&#xA;      it once at start time.&#xD;&#xA;    &lt;/p>&#xD;&#xA;  " id="KS88_C772_GBWF_XW6V_32RZ_3FFV_WGKZ_LKAR_axzz_2n" inboundConnections="_-zjEcKX8EeO9GOdY25h08A">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:ObjectNode" xmi:id="_OjVt0KWfEeOmTtBk4-fpFw" name="Object Node" id="org.nasdanika.amur.it.js.foundation.ObjectNode" description="This node &quot;wires&quot; external object into the flow.">
+      <selector xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_S36xsKX9EeO9GOdY25h08A" editor="RSyntax" text="document.getElementById('time_div')">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_S36xsaX9EeO9GOdY25h08A" name="JavaScript" uid="javascript"/>
+      </selector>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:Call" xmi:id="_PqBCAKWfEeOmTtBk4-fpFw" id="KS88_C772_GBWF_XW6V_32RZ_3FFV_WGKZ_LKAR_bi2w_2o" source="_LSircKWfEeOmTtBk4-fpFw" target="_5LDx8KX8EeO9GOdY25h08A">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_PqBpEKWfEeOmTtBk4-fpFw" sourceName="onclick">
+      <handler xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_8N-JUKX8EeO9GOdY25h08A" editor="RSyntax" text="">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_8N-JUaX8EeO9GOdY25h08A" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:Node" xmi:id="_5LDx8KX8EeO9GOdY25h08A" name="Controller" description="&#xD;&#xA;    &lt;p style=&quot;margin-top: 0&quot;>&#xD;&#xA;      When this node is activated by a call from &lt;tt>Button&lt;/tt> initiated by &#xD;&#xA;      onclick event, it sets &lt;tt>this.Div&lt;/tt> property to '&lt;tt>Hello&lt;/tt> ' &#xD;&#xA;      contatenated with the current time. &lt;tt>this.Div&lt;/tt> property is bound &#xD;&#xA;      to &lt;tt>innerHTML&lt;/tt> property of Div node, which is bound to a DIV &#xD;&#xA;      element with &lt;tt>time_div&lt;/tt> id.&#xD;&#xA;    &lt;/p>&#xD;&#xA;  " id="OG3C_AQOK_MED2_K3G8_YMSB_G8FK_XVMD_5NEO_6if_g" outboundConnections="_-zjEcKX8EeO9GOdY25h08A" inboundConnections="_PqBCAKWfEeOmTtBk4-fpFw">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:Activity" xmi:id="_5LG1QKX8EeO9GOdY25h08A">
+      <handler xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_V28nQKYAEeO9GOdY25h08A" editor="RSyntax" text="this.Div = 'Hello ' + new Date();">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_V28nQaYAEeO9GOdY25h08A" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+    <children xsi:type="org.nasdanika.amur:Reference" xmi:id="_-zjEcKX8EeO9GOdY25h08A" id="OG3C_AQOK_MED2_K3G8_YMSB_G8FK_XVMD_5NEO_zof_h" source="_5LDx8KX8EeO9GOdY25h08A" target="_Lx0ocKWfEeOmTtBk4-fpFw">
+      <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:Reference" xmi:id="_-zkSkKX8EeO9GOdY25h08A" targetName="innerHTML"/>
+    </children>
+  </children>
+</org.nasdanika.amur:Node>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ObjectNode test</title>
+  <link rel="stylesheet" href="css/qunit.css">
+  <script>
+  	function load() {
+  		var statusDiv = document.getElementById('status_div');
+  		statusDiv.innerHTML = "Nachinaem";
+  		ObjectNodeFlowFactory().then(function() { console.log('gotovo'); statusDiv.innerHTML = 'Ready to display time'; }).done();
+  	}
+  </script>
+  
+</head>
+<body onload='load()'>
+	<button id='time_button'>Show Time</button>
+	<div id="time_div">Time...</div>
+	<div id="status_div">Status...</div>
+  <script src="js/q.js"></script>  
+  <script src="js/flows/ObjectNodeFlow.js"></script>  
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmi:id="_jF_igD5lEeOqN_18mfxXgQ" name="TokenizeClone" id="G5CC_LZOD_3Q13_OZ8E_RWGP_WF84_NXV3_Q3TX_25kh_2">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_k5YLsD5lEeOqN_18mfxXgQ" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_JhUY8D5mEeOqN_18mfxXgQ" name="i1" id="G5CC_LZOD_3Q13_OZ8E_RWGP_WF84_NXV3_Q3TX_7ojt_i" outboundConnections="_NPlacD5mEeOqN_18mfxXgQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_JhVAAD5mEeOqN_18mfxXgQ"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_KyklcD5mEeOqN_18mfxXgQ" name="o1" id="G5CC_LZOD_3Q13_OZ8E_RWGP_WF84_NXV3_Q3TX_7v4g_j" inboundConnections="_NPlacD5mEeOqN_18mfxXgQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_KyklcT5mEeOqN_18mfxXgQ">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_r5474D53EeOxaOJrhQz4IA" name="arg0" description="" token="true"/>
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_r5474T53EeOxaOJrhQz4IA" name="arg1" description="" token="true" cloning="Shallow"/>
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_r5474j53EeOxaOJrhQz4IA" name="arg2" description="" cloning="Deep"/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_NPlacD5mEeOqN_18mfxXgQ" id="G5CC_LZOD_3Q13_OZ8E_RWGP_WF84_NXV3_Q3TX_87tt_k" source="_JhUY8D5mEeOqN_18mfxXgQ" target="_KyklcD5mEeOqN_18mfxXgQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Transition" xmi:id="_NPmBgD5mEeOqN_18mfxXgQ" sourceName="toO1"/>
+  </children>
+</org.nasdanika.amur:Node>

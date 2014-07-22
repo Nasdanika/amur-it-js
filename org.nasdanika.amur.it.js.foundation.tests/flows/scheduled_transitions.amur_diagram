@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" type="Amur" name="scheduled_transitions.amur_diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" type="2007" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5007"/>
+    <element href="scheduled_transitions.amur#_XEf7ADv-EeO3xsf1S1bpOQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="87" y="117"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2006" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5006"/>
+    <element href="scheduled_transitions.amur#_ovsKYDv-EeO3xsf1S1bpOQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="312" y="120"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2006" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5006"/>
+    <element href="scheduled_transitions.amur#_qz1MYDv-EeO3xsf1S1bpOQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="312" y="192"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2006" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5006"/>
+    <element href="scheduled_transitions.amur#_sO_i0Dv-EeO3xsf1S1bpOQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="312" y="264"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2006" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5006"/>
+    <element href="scheduled_transitions.amur#_vRFa0Dv-EeO3xsf1S1bpOQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="312" y="336"/>
+  </children>
+  <styles xsi:type="notation:DiagramStyle"/>
+  <element href="scheduled_transitions.amur#_SRmMsDv-EeO3xsf1S1bpOQ"/>
+  <edges type="4001" source="//@children.0" target="//@children.1">
+    <children xsi:type="notation:DecorationNode" type="6001">
+      <layoutConstraint xsi:type="notation:Location" x="-16" y="-10"/>
+    </children>
+    <styles xsi:type="notation:RoutingStyle" routing="Rectilinear"/>
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scheduled_transitions.amur#_yjrM8Dv-EeO3xsf1S1bpOQ"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[0, 0, -216, 15]$[225, -18, 9, -3]"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.775,0.425)"/>
+  </edges>
+  <edges type="4001" source="//@children.0" target="//@children.2">
+    <children xsi:type="notation:DecorationNode" type="6001">
+      <layoutConstraint xsi:type="notation:Location" y="40"/>
+    </children>
+    <styles xsi:type="notation:RoutingStyle" routing="Rectilinear"/>
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scheduled_transitions.amur#_o4IpcD4nEeONEqrJH3TmYQ"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[29, 29, -212, -55]$[29, 88, -212, 4]$[221, 88, -20, 4]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.1,0.275)"/>
+  </edges>
+  <edges type="4001" source="//@children.0" target="//@children.3">
+    <children xsi:type="notation:DecorationNode" type="6001">
+      <layoutConstraint xsi:type="notation:Location" y="40"/>
+    </children>
+    <styles xsi:type="notation:RoutingStyle" routing="Rectilinear"/>
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scheduled_transitions.amur#_wPFo4D4nEeONEqrJH3TmYQ"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[21, 5, -210, -125]$[21, 126, -210, -4]$[225, 126, -6, -4]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.0,0.875)"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.15,0.45)"/>
+  </edges>
+  <edges type="4001" source="//@children.0" target="//@children.4">
+    <children xsi:type="notation:DecorationNode" type="6001">
+      <layoutConstraint xsi:type="notation:Location" y="40"/>
+    </children>
+    <styles xsi:type="notation:RoutingStyle" routing="Rectilinear"/>
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="scheduled_transitions.amur#_2qdJ0D4nEeONEqrJH3TmYQ"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[-25, 0, -225, -211]$[-25, 201, -225, -10]$[191, 201, -9, -10]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.85,1.0)"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.225,0.8)"/>
+  </edges>
+</notation:Diagram>

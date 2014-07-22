@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_stXuEKcAEeOirsP2MDZjyA" type="Amur" name="empty.amur_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_stXuEacAEeOirsP2MDZjyA" type="2007" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_stXuEqcAEeOirsP2MDZjyA" type="5007"/>
+    <element xmi:type="org.nasdanika.amur:InputPort" href="simple.amur#_fJwzABkBEeOpXMVGR6Tqag"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_stXuE6cAEeOirsP2MDZjyA" x="48" y="84"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_stYVIKcAEeOirsP2MDZjyA" type="2006" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_stYVIacAEeOirsP2MDZjyA" type="5006"/>
+    <element xmi:type="org.nasdanika.amur:OutputPort" href="simple.amur#_IX3UgB1fEeO-gqmNf3tv9A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_stYVIqcAEeOirsP2MDZjyA" x="168" y="84"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_stYVI6cAEeOirsP2MDZjyA" type="2006" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_stYVJKcAEeOirsP2MDZjyA" type="5006"/>
+    <element xmi:type="org.nasdanika.amur:OutputPort" href="simple.amur#_T2QEICLVEeOqFe-fpl6Yvg"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_stYVJacAEeOirsP2MDZjyA" x="168" y="156"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_stYVJqcAEeOirsP2MDZjyA" type="2008" fontName="Segoe UI" fillColor="12902911">
+    <children xmi:type="notation:DecorationNode" xmi:id="_stYVJ6cAEeOirsP2MDZjyA" type="5008"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_stYVKKcAEeOirsP2MDZjyA"/>
+    <element xmi:type="org.nasdanika.amur:Node" href="simple.amur#_nhfOwCyQEeOMQO1VexkYkQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_stYVKacAEeOirsP2MDZjyA" x="303" y="251"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_stYVKqcAEeOirsP2MDZjyA"/>
+  <element xmi:type="org.nasdanika.amur:Node" href="simple.amur#_y_i9oBgwEeO4rejLgjSyHg"/>
+  <edges xmi:type="notation:Edge" xmi:id="_stY8MKcAEeOirsP2MDZjyA" type="4002" source="_stXuEacAEeOirsP2MDZjyA" target="_stYVIKcAEeOirsP2MDZjyA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_stY8MacAEeOirsP2MDZjyA" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_stY8MqcAEeOirsP2MDZjyA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_stY8M6cAEeOirsP2MDZjyA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_stY8NKcAEeOirsP2MDZjyA" fontName="Segoe UI"/>
+    <element xmi:type="org.nasdanika.amur:Call" href="simple.amur#_DMcWsCALEeOgANpfzgXVwg"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_stY8NacAEeOirsP2MDZjyA" points="[0, 0, -464, 22]$[459, -23, -5, -1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_stY8NqcAEeOirsP2MDZjyA" id="(0.8,0.6)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_stY8N6cAEeOirsP2MDZjyA" id="(0.125,0.475)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_stY8OKcAEeOirsP2MDZjyA" type="4002" source="_stXuEacAEeOirsP2MDZjyA" target="_stYVI6cAEeOirsP2MDZjyA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_stY8OacAEeOirsP2MDZjyA" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_stY8OqcAEeOirsP2MDZjyA" x="-13" y="-13"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_stY8O6cAEeOirsP2MDZjyA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_stY8PKcAEeOirsP2MDZjyA" fontName="Segoe UI"/>
+    <element xmi:type="org.nasdanika.amur:Call" href="simple.amur#_WkvqsCLVEeOqFe-fpl6Yvg"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_stZjQKcAEeOirsP2MDZjyA" points="[0, 20, -120, -52]$[0, 72, -120, 0]$[100, 72, -20, 0]"/>
+  </edges>
+</notation:Diagram>

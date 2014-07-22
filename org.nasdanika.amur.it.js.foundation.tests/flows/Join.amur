@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_K4bnED99EeOvdudOKA8wZA" name="Join" id="OC61_NQ7C_M5NY_SFAF_YMV1_KMMV_4LP2_VYBF_1_1">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_ddYI8D99EeOvdudOKA8wZA" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_awZlUD99EeOvdudOKA8wZA" name="i1" id="OC61_NQ7C_M5NY_SFAF_YMV1_KMMV_4LP2_VYBF_2a7l_g" outboundConnections="_ejrpsD99EeOvdudOKA8wZA _gVXCsD99EeOvdudOKA8wZA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_ddYwAD99EeOvdudOKA8wZA">
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_dXIjkEHZEeOzXbjG_uJXIQ" text="return [this.ot1(30, 40), this.ot2(50, 60)];">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_dXIjkUHZEeOzXbjG_uJXIQ" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_ejrpsD99EeOvdudOKA8wZA" name="t1" id="OC61_NQ7C_M5NY_SFAF_YMV1_KMMV_4LP2_VYBF_2tw8_i" source="_awZlUD99EeOvdudOKA8wZA" target="_QkQSsD-DEeOQzpdozZnhLA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Transition" xmi:id="_ejsQwD99EeOvdudOKA8wZA" sourceName="ot1" targetName="ji1" joinType="Inner">
+      <outputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_-hWgMD99EeOvdudOKA8wZA" name="arg0" description=""/>
+      <outputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_-hWgMT99EeOvdudOKA8wZA" name="arg1" description=""/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_gVXCsD99EeOvdudOKA8wZA" name="t2" id="OC61_NQ7C_M5NY_SFAF_YMV1_KMMV_4LP2_VYBF_333c_j" source="_awZlUD99EeOvdudOKA8wZA" target="_QkQSsD-DEeOQzpdozZnhLA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Transition" xmi:id="_gVXpwD99EeOvdudOKA8wZA" sourceName="ot2" targetName="ji2" joinType="Outer">
+      <outputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_CkflgD9-EeOvdudOKA8wZA" name="p1" description=""/>
+      <outputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_CkflgT9-EeOvdudOKA8wZA" name="p2" description=""/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Node" xmi:id="_QkQSsD-DEeOQzpdozZnhLA" name="a1" id="KGVX_BAR4_P4FL_7E1E_C6YS_XRHO_7G7N_326F_7b2j_h" inboundConnections="_ejrpsD99EeOvdudOKA8wZA _gVXCsD99EeOvdudOKA8wZA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Activity" xmi:id="_QkTWAD-DEeOQzpdozZnhLA" joinFork="_awZlUD99EeOvdudOKA8wZA">
+      <joinConditions xmi:type="org.nasdanika.amur.it.js:JoinEntry" xmi:id="_5nBWsECaEeOS47ZrfbFBjQ" port="">
+        <conditions xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_5nB9wECaEeOS47ZrfbFBjQ" text="return true;">
+          <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_5nB9wUCaEeOS47ZrfbFBjQ" name="JavaScript" uid="javascript"/>
+        </conditions>
+      </joinConditions>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_IyS7oEHbEeOzXbjG_uJXIQ" text="if (ji1) {&#xA;&#x9;equal(ji1.data.arg0, 30, &quot;ji1.data.arg0&quot;);&#xA;&#x9;equal(ji1.data.arg1, 40, &quot;ji1.data.arg1&quot;);&#xA;}&#xA;&#xA;equal(ji2.data.p1, 50, &quot;ji2.data.p1&quot;);&#xA;equal(ji2.data.p2, 60, &quot;ji2.data.p2&quot;);&#xA;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_IyS7oUHbEeOzXbjG_uJXIQ" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

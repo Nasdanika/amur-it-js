@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_t84n8DCNEeO7KtjvyLrlPA" name="ReferenceFlow" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_g9vv_s">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_wrwpADCNEeO7KtjvyLrlPA" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_vmAh4DCNEeO7KtjvyLrlPA" name="ip1" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_gie2_x" outboundConnections="_LVwmcDCOEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:PropertyInputPort" xmi:id="_yXr_UDCNEeO7KtjvyLrlPA" name="Property Input Port" id="org.nasdanika.amur.it.js.foundation.PropertyInputPort"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_3JQQ4DCNEeO7KtjvyLrlPA" name="op1" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_hlhm_y" inboundConnections="_t1E6UDCOEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:PropertyOutputPort" xmi:id="_5c8x0DCNEeO7KtjvyLrlPA" name="Property Output Port" id="org.nasdanika.amur.it.js.foundation.PropertyOutputPort"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Node" xmi:id="_7tAI4DCNEeO7KtjvyLrlPA" name="Activity 1" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_i93e_12" outboundConnections="_t1E6UDCOEeO7KtjvyLrlPA" inboundConnections="_H9aKkDCOEeO7KtjvyLrlPA _sNLIYDCOEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Activity" xmi:id="_7tB-EDCNEeO7KtjvyLrlPA">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_Q0D3kDPCEeO6r_ietX8_mw" name="a1" description=""/>
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_Q0D3kTPCEeO6r_ietX8_mw" name="arg1" description="dfsd"/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="__JbqkDKdEeOtCbuQN7SBIw" text="Object.getPrototypeOf(this).forA2 = a1+this.externalProperty;&#xA;equal(this.forA2, a1+this.externalProperty, &quot;Setting component variable&quot;);&#xA;&#xA;var ret = this.externalProperty;&#xA;this.externalProperty = a1;&#xA;return ret;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="__JbqkTKdEeOtCbuQN7SBIw" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+    <children xmi:type="org.nasdanika.amur:Reference" xmi:id="_t1E6UDCOEeO7KtjvyLrlPA" name="" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_pgnl_1a" source="_7tAI4DCNEeO7KtjvyLrlPA" target="_3JQQ4DCNEeO7KtjvyLrlPA">
+      <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Reference" xmi:id="_t1E6UTCOEeO7KtjvyLrlPA" sourceName="externalProperty"/>
+    </children>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Node" xmi:id="_-afp4DCNEeO7KtjvyLrlPA" name="Activity 2" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_in4q_13" outboundConnections="_sNLIYDCOEeO7KtjvyLrlPA" inboundConnections="_JGQpADCOEeO7KtjvyLrlPA _LVwmcDCOEeO7KtjvyLrlPA _xKsucDGjEeOVyOOuYYGrsg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Activity" xmi:id="_-afp4TCNEeO7KtjvyLrlPA">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_g3CB8DQwEeO5EN-82h08xA" name="prp" description="Used for testing."/>
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_g3CB8TQwEeO5EN-82h08xA" name="instanceVar" description="Also."/>
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_g3CB8jQwEeO5EN-82h08xA" name="iv4" description=""/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_p3GAwDshEeOvPp7qvb-B3g" text="equal(this.prp, prp, &quot;prp value&quot;);&#xA;this.prp = prp+10;&#xA;equal(this.prp, (prp+10)*2+8, &quot;new prp value&quot;);&#xA;&#xA;equal(this.instanceVar, instanceVar, &quot;instanceVar value&quot;);&#xA;&#xA;Object.getPrototypeOf(this).iv4=iv4;&#xA;&#xA;&#xA;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_p3GAwTshEeOvPp7qvb-B3g" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+    <children xmi:type="org.nasdanika.amur:Reference" xmi:id="_sNLIYDCOEeO7KtjvyLrlPA" name="ref_1" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_p88y_19" source="_-afp4DCNEeO7KtjvyLrlPA" target="_7tAI4DCNEeO7KtjvyLrlPA">
+      <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Reference" xmi:id="_sNLIYTCOEeO7KtjvyLrlPA" sourceName="prp" targetName="forA2">
+        <accessor xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_28J5gDOBEeOOVcDhbUrUcQ" text="return this.target+8;">
+          <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_28J5gTOBEeOOVcDhbUrUcQ" name="JavaScript" uid="javascript"/>
+        </accessor>
+        <mutator xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_5NZjYDOBEeOOVcDhbUrUcQ" text="this.target = newValue*2;">
+          <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_5NZjYTOBEeOOVcDhbUrUcQ" name="JavaScript" uid="javascript"/>
+        </mutator>
+      </implementationType>
+    </children>
+  </children>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_CaTuYDCOEeO7KtjvyLrlPA" name="ip2" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_j7tu_14" outboundConnections="_JGQpADCOEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_CaTuYTCOEeO7KtjvyLrlPA"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_EIjY4DCOEeO7KtjvyLrlPA" name="ip3" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_jgqy_15" outboundConnections="_H9aKkDCOEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_EIjY4TCOEeO7KtjvyLrlPA"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Call" xmi:id="_H9aKkDCOEeO7KtjvyLrlPA" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_k0k5_16" source="_EIjY4DCOEeO7KtjvyLrlPA" target="_7tAI4DCNEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_H9aKkTCOEeO7KtjvyLrlPA" sourceName="a1">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_0zE7sDDlEeO7KtjvyLrlPA" name="arg0"/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Call" xmi:id="_JGQpADCOEeO7KtjvyLrlPA" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_k6gc_17" source="_CaTuYDCOEeO7KtjvyLrlPA" target="_-afp4DCNEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_JGQpATCOEeO7KtjvyLrlPA" sourceName="a2">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_zaAP8DDlEeO7KtjvyLrlPA" name="arg0"/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Reference" xmi:id="_LVwmcDCOEeO7KtjvyLrlPA" name="from ip1" id="GEY5_GPB1_TRSX_AMKV_7OOC_5MXG_EH56_CX72_ki2b_18" source="_vmAh4DCNEeO7KtjvyLrlPA" target="_-afp4DCNEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Reference" xmi:id="_LVxNgDCOEeO7KtjvyLrlPA" sourceName="a2" targetName="instanceVar"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_uOxv4DGjEeOVyOOuYYGrsg" name="ip4" id="WAKX_BLV7_7GFC_F5M7_R71T_6ZWY_K8LM_R65G_17u5v_x" outboundConnections="_xKsucDGjEeOVyOOuYYGrsg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:PropertyInputPort" xmi:id="_v2WxsDGjEeOVyOOuYYGrsg" name="Property Input Port" id="org.nasdanika.amur.it.js.foundation.PropertyInputPort">
+      <accessor xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_Jo9FUDshEeOvPp7qvb-B3g" text="return this.a2 - 5;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_Jo9FUTshEeOvPp7qvb-B3g" name="JavaScript" uid="javascript"/>
+      </accessor>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Reference" xmi:id="_xKsucDGjEeOVyOOuYYGrsg" name="from ip4" id="WAKX_BLV7_7GFC_F5M7_R71T_6ZWY_K8LM_R65G_189d9_y" source="_uOxv4DGjEeOVyOOuYYGrsg" target="_-afp4DCNEeO7KtjvyLrlPA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Reference" xmi:id="_xKtVgDGjEeOVyOOuYYGrsg" sourceName="a2" targetName="iv4">
+      <accessor xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_z4q3MDN9EeOOVcDhbUrUcQ" text="return this.target+18;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_z4q3MTN9EeOOVcDhbUrUcQ" name="JavaScript" uid="javascript"/>
+      </accessor>
+      <mutator xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_yqP8QDN9EeOOVcDhbUrUcQ" text="this.target = newValue-18;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_yqP8QTN9EeOOVcDhbUrUcQ" name="JavaScript" uid="javascript"/>
+      </mutator>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

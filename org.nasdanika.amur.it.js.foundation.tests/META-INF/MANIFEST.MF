@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AmurJS Foundation Tests
+Bundle-SymbolicName: org.nasdanika.amur.it.js.foundation.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Nasdanika

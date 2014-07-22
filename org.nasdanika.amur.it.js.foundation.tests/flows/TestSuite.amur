@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmi:id="_KAEagC5MEeOxm9K9BiYF_Q" name="Test Suite" id="EBGZ_6MVM_8OYZ_LTGQ_EGQF_KPFG_TGVW_1KBV_138m_k">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Suite" xmi:id="__bQigC5MEeOaG__hIcpyag" name="Suite" id="org.nasdanika.amur.it.js.foundation.Suite" description="A helper implementation type for grouping Amur models, e.g. for batch generation.">
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/simple.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/activity.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/references.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/transitions.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/Events.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/Join.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/TokenizeClone.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/scheduled_transitions.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/ForkJoin.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/ErrorHandling/unhandled.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/ErrorHandling/handled.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/ErrorHandling/error_transitions.amur</components>
+    <components>/org.nasdanika.amur.it.js.foundation.tests/flows/ErrorHandling/error_handlers.amur</components>
+  </implementationType>
+</org.nasdanika.amur:Node>

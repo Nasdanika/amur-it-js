@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" type="Amur" name="error_handlers.amur_diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" type="2006" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5006"/>
+    <element href="error_handlers.amur#_3zsz0CLeEeOqFe-fpl6Yvg"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="372" y="84"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2007" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5007"/>
+    <element href="error_handlers.amur#_4_USYCLeEeOqFe-fpl6Yvg"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="96" y="84"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2005" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5005"/>
+    <element href="error_handlers.amur#_BIZ5YCLfEeOqFe-fpl6Yvg"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="204" y="144"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2005" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5005"/>
+    <element href="error_handlers.amur#_GZsM0CLfEeOqFe-fpl6Yvg"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="204" y="204"/>
+  </children>
+  <styles xsi:type="notation:DiagramStyle"/>
+  <element href="error_handlers.amur#_XMR1sCLeEeOqFe-fpl6Yvg"/>
+  <edges type="4003" source="//@children.1" target="//@children.0">
+    <children xsi:type="notation:DecorationNode" type="6003">
+      <layoutConstraint xsi:type="notation:Location" y="40"/>
+    </children>
+    <styles xsi:type="notation:RoutingStyle" routing="Rectilinear"/>
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="error_handlers.amur#_8UooYCLeEeOqFe-fpl6Yvg"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[20, -5, -268, 0]$[296, -9, 8, -4]"/>
+    <targetAnchor xsi:type="notation:IdentityAnchor" id="(0.8,0.375)"/>
+  </edges>
+</notation:Diagram>

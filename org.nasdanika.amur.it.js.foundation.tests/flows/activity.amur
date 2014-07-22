@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_0FHU4C-lEeOlb5e4oODqXw" name="ActivityFlow" id="BT67_QR85_CYYY_WFTO_BO3T_13LX_3ONX_5B3C_khkhi_w">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_88IY4C-lEeODR-8E5H3jjg" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:Node" xmi:id="_9cYmQC-lEeODR-8E5H3jjg" name="MyActivity" description="&#xD;&#xA;    &lt;p style=&quot;margin-top: 0&quot;>&#xD;&#xA;      pertussin &lt;i>rules!&lt;/i>&#xD;&#xA;    &lt;/p>&#xD;&#xA;  " id="SNQD_EAQA_WSXA_TD73_1GDO_V6RE_3M7W_XSPY_ifs_f" outboundConnections="_HIWVQC-mEeODR-8E5H3jjg" inboundConnections="_EkQA0C-mEeODR-8E5H3jjg _FZauQC-mEeODR-8E5H3jjg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Activity" xmi:id="_9cYmQS-lEeODR-8E5H3jjg">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_So2kAC-mEeODR-8E5H3jjg" name="ap1"/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_8Wqk0DAoEeOfgrenj_zu5g" text="if (this.$inputName == 'ic1') {&#xA;&#x9;return this.out(ap1)+5;&#xA;} else if (this.$inputName == 'c2') {&#xA;&#x9;return this.out(ap1+5);&#xA;}&#xA;&#xA;throw &quot;Unexpected input: &quot;+this.$inputName;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_8Wqk0TAoEeOfgrenj_zu5g" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+    <children xmi:type="org.nasdanika.amur:Call" xmi:id="_HIWVQC-mEeODR-8E5H3jjg" description="&#xD;&#xA;    &lt;p style=&quot;margin-top: 0&quot;>&#xD;&#xA;      &lt;b>And &lt;i>you?&lt;/i>&lt;/b>&#xD;&#xA;    &lt;/p>&#xD;&#xA;  " id="SNQD_EAQA_WSXA_TD73_1GDO_V6RE_3M7W_XSPY_1wll_l" source="_9cYmQC-lEeODR-8E5H3jjg" target="_CFiisC-mEeODR-8E5H3jjg">
+      <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_HIWVQS-mEeODR-8E5H3jjg" sourceName="out"/>
+    </children>
+  </children>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="__Gf-sC-lEeODR-8E5H3jjg" name="i1" id="SNQD_EAQA_WSXA_TD73_1GDO_V6RE_3M7W_XSPY_r0w_g" outboundConnections="_EkQA0C-mEeODR-8E5H3jjg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="__Gf-sS-lEeODR-8E5H3jjg">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_M690IC-mEeODR-8E5H3jjg" name="p1"/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_lWqG8C-mEeODR-8E5H3jjg" text="return this.oc1(p1);">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_lWqG8S-mEeODR-8E5H3jjg" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_BGrGsC-mEeODR-8E5H3jjg" name="i2" id="SNQD_EAQA_WSXA_TD73_1GDO_V6RE_3M7W_XSPY_11e8_h" outboundConnections="_FZauQC-mEeODR-8E5H3jjg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_BGrGsS-mEeODR-8E5H3jjg">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_PQCOEC-mEeODR-8E5H3jjg" name="p2"/>
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_PQCOES-mEeODR-8E5H3jjg" name="p3"/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_p5QIYC-mEeODR-8E5H3jjg" text="return this.oc2(p2+p3);">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_p5QIYS-mEeODR-8E5H3jjg" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_CFiisC-mEeODR-8E5H3jjg" name="o1" id="SNQD_EAQA_WSXA_TD73_1GDO_V6RE_3M7W_XSPY_16hc_i" inboundConnections="_HIWVQC-mEeODR-8E5H3jjg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_CFiisS-mEeODR-8E5H3jjg">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_67TJMDQ9EeOp8O6wvaX-pA" name="arg0" description="First arg"/>
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_67TJMTQ9EeOp8O6wvaX-pA" name="arg1" description="Second argument."/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Call" xmi:id="_EkQA0C-mEeODR-8E5H3jjg" id="SNQD_EAQA_WSXA_TD73_1GDO_V6RE_3M7W_XSPY_1jbm_j" source="__Gf-sC-lEeODR-8E5H3jjg" target="_9cYmQC-lEeODR-8E5H3jjg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_EkQn4C-mEeODR-8E5H3jjg" sourceName="oc1" targetName="ic1"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Call" xmi:id="_FZauQC-mEeODR-8E5H3jjg" id="SNQD_EAQA_WSXA_TD73_1GDO_V6RE_3M7W_XSPY_1nmh_k" source="_BGrGsC-mEeODR-8E5H3jjg" target="_9cYmQC-lEeODR-8E5H3jjg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_FZauQS-mEeODR-8E5H3jjg" sourceName="oc2" targetName="c2"/>
+  </children>
+</org.nasdanika.amur:Node>

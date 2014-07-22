@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_IKdKwCC5EeOOiMQGkGpSrw" name="UnhandledError" id="VR6L_KQLW_8FKR_1KCD_O77G_X47O_Y5XE_ZDGT_50gp_m">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_KSQkwCC5EeOOiMQGkGpSrw" name="Top Level Flow" id="org.nasdanika.amur.it.js.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows/ErrorHandling" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows/ErrorHandling" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_dIo04CC5EeOOiMQGkGpSrw" name="p1" id="VR6L_KQLW_8FKR_1KCD_O77G_X47O_Y5XE_ZDGT_8123_p">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_dIqqECC5EeOOiMQGkGpSrw">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_qQTOsCC5EeOOiMQGkGpSrw" name="prm"/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_oyBS0CC5EeOOiMQGkGpSrw" text="if (prm == &quot;Bad&quot;) {&#xA;&#x9;throw &quot;Bad stuff&quot;;&#xA;}&#xA;return &quot;Parameter: &quot;+prm;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_oyBS0SC5EeOOiMQGkGpSrw" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

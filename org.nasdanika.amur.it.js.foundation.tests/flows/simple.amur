@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_y_i9oBgwEeO4rejLgjSyHg" name="SimpleFlow" description="&#xD;&#xA;    &lt;p style=&quot;margin-top: 0&quot;>&#xD;&#xA;      This simple flow tests calls with handler and without by performing &#xD;&#xA;      mathematical operations on inputs.&#xD;&#xA;    &lt;/p>&#xD;&#xA;  " id="KBQB_36XL_AOG7_CQS8_G4CX_O5Z4_P7ES_KABW_xi6_t">
+  <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_0l-I4BgwEeO4rejLgjSyHg" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="../WebContent/js/flows" resourceFolder="" skeleton="FlowSkeleton.js">
+    <start xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_R8y20COTEeOkhoO7kW1BsQ" text="ok(!$facade.flags.flow, &quot;[start: Flow] Flow is not started&quot;);&#xA;ok(!$facade.flags.i1, &quot;[start: Flow] i1 is not started&quot;);&#xA;ok(!$facade.flags.p2, &quot;[start: Flow] p2 is not started&quot;);&#xA;ok(!$facade.flags.o1, &quot;[start: Flow] o1 is not started&quot;);&#xA;ok(!$facade.flags.o2, &quot;[start: Flow] o2 is not started&quot;);&#xA;//console.log(&quot;Flow start&quot;);&#xA;$facade.flags.flow = true;">
+      <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_R8y20SOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+    </start>
+    <stop xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_M0mOkC0CEeOoa-cD4p4Aug" text="ok($facade.flags.flow, &quot;[stop: Flow] Flow is started&quot;);&#xA;ok(!$facade.flags.i1, &quot;[stop: Flow] i1 is not started&quot;);&#xA;ok(!$facade.flags.p2, &quot;[stop: Flow] p2 is not started&quot;);&#xA;ok(!$facade.flags.o1, &quot;[stop: Flow] o1 is not started&quot;);&#xA;ok(!$facade.flags.o2, &quot;[stop: Flow] o2 is not started&quot;);&#xA;ok(!$facade.flags.Standalone, &quot;[stop: Flow] Standalone is not started&quot;);&#xA;">
+      <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_M0mOkS0CEeOoa-cD4p4Aug" name="JavaScript" uid="javascript"/>
+    </stop>
+  </implementationType>
+  <children xsi:type="org.nasdanika.amur:InputPort" xmi:id="_fJwzABkBEeOpXMVGR6Tqag" name="i1" id="P3RY_NLTP_1T64_A2FC_QNYG_YVLG_17LL_7MSG_3uq_g" outboundConnections="_DMcWsCALEeOgANpfzgXVwg _WkvqsCLVEeOqFe-fpl6Yvg">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_fJ7LEBkBEeOpXMVGR6Tqag">
+      <start xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_VCFz0COTEeOkhoO7kW1BsQ" text="ok($facade.flags.flow, &quot;[start: i1] Flow is started&quot;);&#xA;ok($facade.flags.o1, &quot;[start: i1] o1 is started&quot;);&#xA;ok($facade.flags.o2, &quot;[start: i1] o2 is started&quot;);&#xA;ok($facade.flags.p2, &quot;[start: i1] p2 is started&quot;);&#xA;ok(!$facade.flags.i1, &quot;[start: i1] i1 is not started&quot;);&#xA;$facade.flags.i1 = true;&#xA;//console.log(&quot;i1 start&quot;);&#xA;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_VCFz0SOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </start>
+      <stop xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_WNX7MCOTEeOkhoO7kW1BsQ" text="ok($facade.flags.flow, &quot;[stop: i1] Flow is started&quot;);&#xA;ok($facade.flags.i1, &quot;[stop: i1] i1 is started&quot;);&#xA;ok($facade.flags.p2, &quot;[stop: i1] p2 is started&quot;);&#xA;ok($facade.flags.o1, &quot;[stop: i1] o1 is started&quot;);&#xA;ok($facade.flags.o2, &quot;[stop: i1] o2 is started&quot;);&#xA;//console.log(&quot;i1 stop&quot;);&#xA;delete $facade.flags.i1;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_WNX7MSOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </stop>
+      <inputParameters xmi:id="_oaQN8CAHEeOgANpfzgXVwg" name="arg0"/>
+      <inputParameters xmi:id="_oaQN8SAHEeOgANpfzgXVwg" name="arg1"/>
+      <handler xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_aX_BYC3OEeOxSYT_WoRzkA" text="var r1 = this.o1(arg0);&#xA;equal(r1, 12, &quot;o1 return value&quot;);&#xA;var r2 = this.p2(arg1);&#xA;equal(r2, 105, &quot;p2 return value&quot;);&#xA;return r1+r2;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_aX_BYS3OEeOxSYT_WoRzkA" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:OutputPort" xmi:id="_IX3UgB1fEeO-gqmNf3tv9A" name="o1" id="NZ1E_5ZZK_XFZZ_FTCY_N6WT_CC3O_BW14_HBVZ_29ztg_g" inboundConnections="_DMcWsCALEeOgANpfzgXVwg">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_IX8NAB1fEeO-gqmNf3tv9A">
+      <start xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_Xjic4COTEeOkhoO7kW1BsQ" text="ok($facade.flags.flow, &quot;[start: o1] Flow is started&quot;);&#xA;ok(!$facade.flags.o1, &quot;[start: o1] o1 is not started&quot;);&#xA;ok(!$facade.flags.i1, &quot;[start: o1] i1 is not started&quot;);&#xA;//console.log(&quot;o1 start&quot;);&#xA;$facade.flags.o1 = true;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_Xjic4SOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </start>
+      <stop xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_YeUDECOTEeOkhoO7kW1BsQ" text="ok($facade.flags.flow, &quot;[stop: o1] Flow is started&quot;);&#xA;ok(!$facade.flags.i1, &quot;[stop: o1] i1 is started&quot;);&#xA;ok($facade.flags.o1, &quot;[stop: o1] o1 is started&quot;);&#xA;//console.log(&quot;o1 stop&quot;);&#xA;delete $facade.flags.o1;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_YeUDESOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </stop>
+      <parameters xmi:id="_WkYAIC2-EeON__t9p3AxIw" name="prm"/>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:Call" xmi:id="_DMcWsCALEeOgANpfzgXVwg" id="8YD2_OS5H_GM34_QXEV_YE37_BHTS_KLXE_H5N6_10830_i" source="_fJwzABkBEeOpXMVGR6Tqag" target="_IX3UgB1fEeO-gqmNf3tv9A">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_DMc9wCALEeOgANpfzgXVwg" sourceName="o1">
+      <handler xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_0dUyECLXEeOqFe-fpl6Yvg" text="">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_0dUyESLXEeOqFe-fpl6Yvg" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:OutputPort" xmi:id="_T2QEICLVEeOqFe-fpl6Yvg" name="o2" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_dophz_13" inboundConnections="_WkvqsCLVEeOqFe-fpl6Yvg">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_T2R5UCLVEeOqFe-fpl6Yvg">
+      <start xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_bO1p8COTEeOkhoO7kW1BsQ" text="// Delays execution 300 milliseconds, returns a promise.&#xA;var sp = $delay(function() {&#xA;&#x9;ok($facade.flags.flow, &quot;[start: o2] Flow is started&quot;);&#xA;&#x9;ok(!$facade.flags.o2, &quot;[start: o2] o2 is not started&quot;);&#xA;&#x9;ok(!$facade.flags.p2, &quot;[start: o2] p2 is not started&quot;);&#xA;&#x9;ok(!$facade.flags.i1, &quot;[start: o2] i1 is not started&quot;);&#xA;&#x9;$facade.flags.o2 = true;&#xA;&#x9;//console.log(&quot;o2 start&quot;);&#xA;}, this, 300)();&#xA;&#xA;return sp;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_bO1p8SOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </start>
+      <stop xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_cFTX4COTEeOkhoO7kW1BsQ" text="ok($facade.flags.flow, &quot;[stop: o2] Flow is started&quot;);&#xA;ok(!$facade.flags.i1, &quot;[stop: o2] i1 is not started&quot;);&#xA;ok(!$facade.flags.p2, &quot;[stop: o2] p2 is not started&quot;);&#xA;ok($facade.flags.o2, &quot;[stop: o2] o2 is started&quot;);&#xA;//console.log(&quot;o2 stop&quot;);&#xA;delete $facade.flags.o2;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_cFTX4SOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </stop>
+      <parameters xmi:id="_eDO1gCLVEeOqFe-fpl6Yvg" name="p1"/>
+      <parameters xmi:id="_eDO1gSLVEeOqFe-fpl6Yvg" name="p2"/>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:Call" xmi:id="_WkvqsCLVEeOqFe-fpl6Yvg" name="p2" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_dp3m8_14" source="_fJwzABkBEeOpXMVGR6Tqag" target="_T2QEICLVEeOqFe-fpl6Yvg">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:Call" xmi:id="_WkvqsSLVEeOqFe-fpl6Yvg" sourceName="p2">
+      <start xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_ZYuc4COTEeOkhoO7kW1BsQ" text="ok($facade.flags.flow, &quot;[start: p2] Flow is started&quot;);&#xA;ok($facade.flags.o2, &quot;[start: p2] o2 is started&quot;);&#xA;ok(!$facade.flags.p2, &quot;[start: p2] p2 is not started&quot;);&#xA;ok(!$facade.flags.i1, &quot;[start: p2] i1 is not started&quot;);&#xA;$facade.flags.p2 = true;&#xA;//console.log(&quot;p2 start&quot;);&#xA;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_ZYuc4SOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </start>
+      <stop xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_aZTJECOTEeOkhoO7kW1BsQ" text="// Delays execution 500 milliseconds, returns a promise.&#xA;var sp = $delay(function() {&#xA;&#x9;ok($facade.flags.flow, &quot;[stop: p2] Flow is started&quot;);&#xA;&#x9;ok(!$facade.flags.i1, &quot;[stop: p2] i1 is not started&quot;);&#xA;&#x9;ok($facade.flags.p2, &quot;[stop: p2] p2 is started&quot;);&#xA;&#x9;ok($facade.flags.o2, &quot;[stop: p2] o2 is started&quot;);&#xA;&#x9;//console.log(&quot;p2 stop&quot;);&#xA;&#x9;delete $facade.flags.p2;&#xA;}, this, 500)();&#xA;&#xA;return sp;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_aZTJESOTEeOkhoO7kW1BsQ" name="JavaScript" uid="javascript"/>
+      </stop>
+      <parameters xmi:id="_rbJ44CLVEeOqFe-fpl6Yvg" name="prm"/>
+      <handler xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="__lhPAC3OEeOxSYT_WoRzkA" text="equal(prm, 10, &quot;p2 prm argument&quot;);&#xA;var r2 = this.target(prm, 10);&#xA;equal(r2, 100, &quot;o2 return value&quot;);&#xA;return r2 + 5;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="__lhPAS3OEeOxSYT_WoRzkA" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xsi:type="org.nasdanika.amur:Node" xmi:id="_nhfOwCyQEeOMQO1VexkYkQ" name="Standalone" id="GQ5M_LHT1_EOHE_5S4T_S2AB_AY6P_WNRF_DB5Q_3go8_k">
+    <implementationType xsi:type="org.nasdanika.amur.it.js.foundation:Activity" xmi:id="_nhhrACyQEeOMQO1VexkYkQ">
+      <start xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_9RLkAC0BEeOoa-cD4p4Aug" text="ok($facade.flags.flow, &quot;[start: Standalone] Flow is started&quot;);&#xA;ok(!$facade.flags.Standalone, &quot;[start: Standalone] Standalone is not started&quot;);&#xA;$facade.flags.Standalone = true;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_9RLkAS0BEeOoa-cD4p4Aug" name="JavaScript" uid="javascript"/>
+      </start>
+      <stop xsi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_Hoq8QC0CEeOoa-cD4p4Aug" text="ok($facade.flags.flow, &quot;[stop: Standalone] Flow is started&quot;);&#xA;ok($facade.flags.Standalone, &quot;[stop: Standalone] Standalone is started&quot;);&#xA;delete $facade.flags.Standalone;">
+        <language xsi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_Hoq8QS0CEeOoa-cD4p4Aug" name="JavaScript" uid="javascript"/>
+      </stop>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

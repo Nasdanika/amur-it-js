@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" type="Amur" name="Events.amur_diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" type="2007" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5007"/>
+    <element href="Events.amur#_5zvo0D6REeOe9pLbI6ITlQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="58" y="149"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2003" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5003"/>
+    <element href="Events.amur#_-Q5woD6REeOe9pLbI6ITlQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="180" y="144"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2003" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5003"/>
+    <element href="Events.amur#_BwTPsD6SEeOe9pLbI6ITlQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="180" y="228"/>
+  </children>
+  <styles xsi:type="notation:DiagramStyle"/>
+  <element href="Events.amur#_5NEqYD6REeOe9pLbI6ITlQ"/>
+</notation:Diagram>

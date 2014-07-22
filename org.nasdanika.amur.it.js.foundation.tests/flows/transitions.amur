@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_Qv7yQDslEeOI0tDSpdKfUA" name="TransitionsFlow" id="GQP7_GFMF_2OA1_OGF7_GYH6_VXHQ_TCB7_VKYZ_3qjo_2">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_g0roQDslEeOI0tDSpdKfUA" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_7EzbMDsnEeOI0tDSpdKfUA" name="i1" id="GQP7_GFMF_2OA1_OGF7_GYH6_VXHQ_TCB7_VKYZ_s8is_j" outboundConnections="_VQY-UDsoEeOI0tDSpdKfUA _tWjWUDuGEeOVU9ZgfQYdrw _5bGtUDuGEeOVU9ZgfQYdrw">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_7E13cDsnEeOI0tDSpdKfUA" outboundTransitionsOrder="_tWjWUDuGEeOVU9ZgfQYdrw _5bGtUDuGEeOVU9ZgfQYdrw">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_F8D4oDsoEeOI0tDSpdKfUA" name="p0" description="This parameter controls which transitions to activate and tests to execute."/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_PZY60DuNEeOVU9ZgfQYdrw" text="switch (p0) {&#xA;&#x9;case &quot;direct&quot;:&#xA;&#x9;&#x9;return this.t1(p0);&#xA;&#x9;case &quot;dispatch-c&quot;:&#xA;&#x9;&#x9;return this.$dispatch(20);&#xA;&#x9;case &quot;dispatch-u&quot;:&#xA;&#x9;&#x9;return this.$dispatch(5);&#xA;&#x9;case &quot;publish-all&quot;:&#xA;&#x9;&#x9;return this.$publish(20);&#xA;&#x9;case &quot;publish-u&quot;:&#xA;&#x9;&#x9;return this.$publish(5);&#xA;}&#xA;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_PZZh4DuNEeOVU9ZgfQYdrw" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_LtFcEDsoEeOI0tDSpdKfUA" name="o1" id="GQP7_GFMF_2OA1_OGF7_GYH6_VXHQ_TCB7_VKYZ_ummq_m" inboundConnections="_VQY-UDsoEeOI0tDSpdKfUA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_LtHRQDsoEeOI0tDSpdKfUA">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_SOEc0DsoEeOI0tDSpdKfUA" name="prm" description="Output."/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_VQY-UDsoEeOI0tDSpdKfUA" id="GQP7_GFMF_2OA1_OGF7_GYH6_VXHQ_TCB7_VKYZ_w03a_n" source="_7EzbMDsnEeOI0tDSpdKfUA" target="_LtFcEDsoEeOI0tDSpdKfUA">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Transition" xmi:id="_VQazgDsoEeOI0tDSpdKfUA" sourceName="t1"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_lpOeQDuGEeOVU9ZgfQYdrw" name="o2" id="NRT1_DG4W_PX3W_8W4E_O2Q6_88WX_2Y83_4X8Q_nwymz_m" inboundConnections="_tWjWUDuGEeOVU9ZgfQYdrw">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_lpQTcDuGEeOVU9ZgfQYdrw">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_pwvtQDuGEeOVU9ZgfQYdrw" name="arg0" description=""/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_nZErQDuGEeOVU9ZgfQYdrw" name="o3" id="NRT1_DG4W_PX3W_8W4E_O2Q6_88WX_2Y83_4X8Q_nx7os_n" inboundConnections="_5bGtUDuGEeOVU9ZgfQYdrw">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_nZErQTuGEeOVU9ZgfQYdrw">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_rCvgoDuGEeOVU9ZgfQYdrw" name="z" description=""/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_tWjWUDuGEeOVU9ZgfQYdrw" name="conditional" id="NRT1_DG4W_PX3W_8W4E_O2Q6_88WX_2Y83_4X8Q_ny2jx_o" source="_7EzbMDsnEeOI0tDSpdKfUA" target="_lpOeQDuGEeOVU9ZgfQYdrw">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Transition" xmi:id="_tWj9YDuGEeOVU9ZgfQYdrw" dispatch="true">
+      <condition xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_0aFbwDuMEeOVU9ZgfQYdrw" text="arg0 > 10">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_0aFbwTuMEeOVU9ZgfQYdrw" name="JavaScript" uid="javascript"/>
+      </condition>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_5bGtUDuGEeOVU9ZgfQYdrw" name="unconditional" id="NRT1_DG4W_PX3W_8W4E_O2Q6_88WX_2Y83_4X8Q_nzt25_w" source="_7EzbMDsnEeOI0tDSpdKfUA" target="_nZErQDuGEeOVU9ZgfQYdrw">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:Transition" xmi:id="_5bH7cDuGEeOVU9ZgfQYdrw" sourceName="" dispatch="true">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_-hEhkDuGEeOVU9ZgfQYdrw" name="x" description=""/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_CLQUUDuHEeOVU9ZgfQYdrw" text="return this.target(x)+8;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_CLQ7YDuHEeOVU9ZgfQYdrw" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

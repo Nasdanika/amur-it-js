@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" type="Amur" name="TokenizeClone.amur_diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" type="2007" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5007"/>
+    <element href="TokenizeClone.amur#_JhUY8D5mEeOqN_18mfxXgQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="66" y="151"/>
+  </children>
+  <children xsi:type="notation:Shape" type="2006" fontName="Segoe UI" fillColor="12902911">
+    <children xsi:type="notation:DecorationNode" type="5006"/>
+    <element href="TokenizeClone.amur#_KyklcD5mEeOqN_18mfxXgQ"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="440" y="159"/>
+  </children>
+  <styles xsi:type="notation:DiagramStyle"/>
+  <element href="TokenizeClone.amur#_jF_igD5lEeOqN_18mfxXgQ"/>
+  <edges type="4001" source="//@children.0" target="//@children.1">
+    <children xsi:type="notation:DecorationNode" type="6001">
+      <layoutConstraint xsi:type="notation:Location" y="40"/>
+    </children>
+    <styles xsi:type="notation:RoutingStyle" routing="Rectilinear"/>
+    <styles xsi:type="notation:FontStyle" fontName="Segoe UI"/>
+    <element href="TokenizeClone.amur#_NPlacD5mEeOqN_18mfxXgQ"/>
+    <bendpoints xsi:type="notation:RelativeBendpoints" points="[33, 5, -354, -4]$[389, -11, 2, -20]"/>
+    <sourceAnchor xsi:type="notation:IdentityAnchor" id="(0.175,0.475)"/>
+  </edges>
+</notation:Diagram>

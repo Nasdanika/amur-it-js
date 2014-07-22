@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_SRmMsDv-EeO3xsf1S1bpOQ" name="ScheduledTransitions" id="W3DR_H2AO_KMWB_S8N8_NDDB_783C_RAM3_MW82_61zb_n">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_Yuv2UDv-EeO3xsf1S1bpOQ" name="Top Level Flow" id="org.nasdanika.amur.it.js.foundation.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_XEf7ADv-EeO3xsf1S1bpOQ" name="i1" id="W3DR_H2AO_KMWB_S8N8_NDDB_783C_RAM3_MW82_6qt8_q" outboundConnections="_yjrM8Dv-EeO3xsf1S1bpOQ _o4IpcD4nEeONEqrJH3TmYQ _wPFo4D4nEeONEqrJH3TmYQ _2qdJ0D4nEeONEqrJH3TmYQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_Yuv2UTv-EeO3xsf1S1bpOQ">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_BIzDQDv_EeO3xsf1S1bpOQ" name="stopDelay" description="Delay for invoking o1 which stops the flow."/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_ryu1gD4rEeOea4JXeAAmoA" text="var ts = this.toStop();&#xA;&#xA;this.timeOut2();&#xA;var to3p = this.timeOut3();&#xA;this.interval4();&#xA;to3p.cancel();&#xA;return ts;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_ryu1gT4rEeOea4JXeAAmoA" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_ovsKYDv-EeO3xsf1S1bpOQ" name="o1" id="W3DR_H2AO_KMWB_S8N8_NDDB_783C_RAM3_MW82_9ac3_r" inboundConnections="_yjrM8Dv-EeO3xsf1S1bpOQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_ovsKYTv-EeO3xsf1S1bpOQ">
+      <joinConditions xmi:type="org.nasdanika.amur.it.js:JoinEntry" xmi:id="_IHizcD8zEeOs9bDZJu43Qw" port="">
+        <conditions xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_IHizcT8zEeOs9bDZJu43Qw" text="return true;">
+          <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_IHizcj8zEeOs9bDZJu43Qw" name="JavaScript" uid="javascript"/>
+        </conditions>
+      </joinConditions>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_qz1MYDv-EeO3xsf1S1bpOQ" name="o2" id="W3DR_H2AO_KMWB_S8N8_NDDB_783C_RAM3_MW82_9l0y_s" inboundConnections="_o4IpcD4nEeONEqrJH3TmYQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_qz1MYTv-EeO3xsf1S1bpOQ"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_sO_i0Dv-EeO3xsf1S1bpOQ" name="o3" id="W3DR_H2AO_KMWB_S8N8_NDDB_783C_RAM3_MW82_9sei_t" inboundConnections="_wPFo4D4nEeONEqrJH3TmYQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_sO_i0Tv-EeO3xsf1S1bpOQ"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_vRFa0Dv-EeO3xsf1S1bpOQ" name="o4" id="W3DR_H2AO_KMWB_S8N8_NDDB_783C_RAM3_MW82_a83u_u" inboundConnections="_2qdJ0D4nEeONEqrJH3TmYQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_vRFa0Tv-EeO3xsf1S1bpOQ"/>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_yjrM8Dv-EeO3xsf1S1bpOQ" name="stop" id="W3DR_H2AO_KMWB_S8N8_NDDB_783C_RAM3_MW82_ap58_v" source="_XEf7ADv-EeO3xsf1S1bpOQ" target="_ovsKYDv-EeO3xsf1S1bpOQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ScheduledTransition" xmi:id="_2KI9UDv-EeO3xsf1S1bpOQ" name="Scheduled transition" id="org.nasdanika.amur.it.js.foundation.ScheduledTransition" description="Transition which can be scheduled to be executed with a specified delay or interval" sourceName="toStop" type="Delay">
+      <period xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_yZemYD4zEeOea4JXeAAmoA" text="return this.parents[0].data.stopDelay;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_yZemYT4zEeOea4JXeAAmoA" name="JavaScript" uid="javascript"/>
+      </period>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_o4IpcD4nEeONEqrJH3TmYQ" name="" id="CY8E_OXOZ_GTYF_2KRF_2DP7_SSRZ_7BGW_PFMV_1y968_l" source="_XEf7ADv-EeO3xsf1S1bpOQ" target="_qz1MYDv-EeO3xsf1S1bpOQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ScheduledTransition" xmi:id="_8SNcgD4nEeONEqrJH3TmYQ" name="Scheduled transition" id="org.nasdanika.amur.it.js.foundation.ScheduledTransition" description="Transition which can be scheduled to be executed with a specified delay or interval" sourceName="timeOut2">
+      <period xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_AtlboD4oEeONEqrJH3TmYQ" text="return 400;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_AtlboT4oEeONEqrJH3TmYQ" name="JavaScript" uid="javascript"/>
+      </period>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_wPFo4D4nEeONEqrJH3TmYQ" id="CY8E_OXOZ_GTYF_2KRF_2DP7_SSRZ_7BGW_PFMV_1zb9z_m" source="_XEf7ADv-EeO3xsf1S1bpOQ" target="_sO_i0Dv-EeO3xsf1S1bpOQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ScheduledTransition" xmi:id="_qwtpwD4pEeOea4JXeAAmoA" name="Scheduled transition" id="org.nasdanika.amur.it.js.foundation.ScheduledTransition" description="Transition which can be scheduled to be executed with a specified delay or interval" sourceName="timeOut3">
+      <period xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_zg_MkD4pEeOea4JXeAAmoA" text="return 300;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_zg_MkT4pEeOea4JXeAAmoA" name="JavaScript" uid="javascript"/>
+      </period>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:Transition" xmi:id="_2qdJ0D4nEeONEqrJH3TmYQ" id="CY8E_OXOZ_GTYF_2KRF_2DP7_SSRZ_7BGW_PFMV_208k6_n" source="_XEf7ADv-EeO3xsf1S1bpOQ" target="_vRFa0Dv-EeO3xsf1S1bpOQ">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ScheduledTransition" xmi:id="_48vDkD4pEeOea4JXeAAmoA" name="Scheduled transition" id="org.nasdanika.amur.it.js.foundation.ScheduledTransition" description="Transition which can be scheduled to be executed with a specified delay or interval" sourceName="interval4" type="Interval">
+      <period xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_-DXmMD4pEeOea4JXeAAmoA" text="return 200;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_-DXmMT4pEeOea4JXeAAmoA" name="JavaScript" uid="javascript"/>
+      </period>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="KS88_C772_GBWF_XW6V_32RZ_3FFV_WGKZ_LKAR_ajkq_2j_diagram_0" type="Amur" name="ObjectNode.amur_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_Yo4sEKcAEeOirsP2MDZjyA" type="2003" fontName="Segoe UI" fillColor="12902911">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Yo56MKcAEeOirsP2MDZjyA" type="5003"/>
+    <element xmi:type="org.nasdanika.amur:ConnectionSource" href="ObjectNode.amur#_LSircKWfEeOmTtBk4-fpFw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yo7vYKcAEeOirsP2MDZjyA" x="60" y="60"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Yo7vYacAEeOirsP2MDZjyA" type="2004" fontName="Segoe UI" fillColor="12902911">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Yo7vYqcAEeOirsP2MDZjyA" type="5004"/>
+    <element xmi:type="org.nasdanika.amur:ConnectionTarget" href="ObjectNode.amur#_Lx0ocKWfEeOmTtBk4-fpFw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yo7vY6cAEeOirsP2MDZjyA" x="396" y="60"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="OG3C_AQOK_MED2_K3G8_YMSB_G8FK_XVMD_5NEO_6if_g_diagram_0" type="2008" fontName="Segoe UI" fillColor="12902911">
+    <children xmi:type="notation:DecorationNode" xmi:id="OG3C_AQOK_MED2_K3G8_YMSB_G8FK_XVMD_5NEO_6if_g_diagram_1" type="5008"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_Yo8WcKcAEeOirsP2MDZjyA"/>
+    <element xmi:type="org.nasdanika.amur:Node" href="ObjectNode.amur#_5LDx8KX8EeO9GOdY25h08A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yo8WcacAEeOirsP2MDZjyA" x="192" y="60"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_Yo9kkKcAEeOirsP2MDZjyA"/>
+  <element xmi:type="org.nasdanika.amur:Node" href="ObjectNode.amur#_I_jVIKWfEeOmTtBk4-fpFw"/>
+  <edges xmi:type="notation:Edge" xmi:id="_Yo_ZwKcAEeOirsP2MDZjyA" type="4002" source="_Yo4sEKcAEeOirsP2MDZjyA" target="OG3C_AQOK_MED2_K3G8_YMSB_G8FK_XVMD_5NEO_6if_g_diagram_0">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Yo_ZwacAEeOirsP2MDZjyA" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Yo_ZwqcAEeOirsP2MDZjyA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_YpAn4KcAEeOirsP2MDZjyA" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YpB2AKcAEeOirsP2MDZjyA" fontName="Segoe UI"/>
+    <element xmi:type="org.nasdanika.amur:Call" href="ObjectNode.amur#_PqBCAKWfEeOmTtBk4-fpFw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YpDEIKcAEeOirsP2MDZjyA" points="[0, -2, -159, 6]$[160, 12, 1, 20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YpDrMKcAEeOirsP2MDZjyA" id="(1.0,0.625)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_YpDrMacAEeOirsP2MDZjyA" type="4004" source="OG3C_AQOK_MED2_K3G8_YMSB_G8FK_XVMD_5NEO_6if_g_diagram_0" target="_Yo7vYacAEeOirsP2MDZjyA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YpESQKcAEeOirsP2MDZjyA" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_YpESQacAEeOirsP2MDZjyA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_YpESQqcAEeOirsP2MDZjyA" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YpESQ6cAEeOirsP2MDZjyA" fontName="Segoe UI"/>
+    <element xmi:type="org.nasdanika.amur:Reference" href="ObjectNode.amur#_-zjEcKX8EeO9GOdY25h08A"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YpESRKcAEeOirsP2MDZjyA" points="[17, -16, -130, 6]$[138, -16, -9, 6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YpESRacAEeOirsP2MDZjyA" id="(0.7951807228915663,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YpESRqcAEeOirsP2MDZjyA" id="(0.225,0.45)"/>
+  </edges>
+</notation:Diagram>

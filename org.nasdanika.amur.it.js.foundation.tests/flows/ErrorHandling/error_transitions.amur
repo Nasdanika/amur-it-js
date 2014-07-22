@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.nasdanika.amur:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.nasdanika.amur="urn:org.nasdanika.amur" xmlns:org.nasdanika.amur.it.js="urn:org.nasdanika.amur.it.js" xmlns:org.nasdanika.amur.it.js.foundation="urn:org.nasdanika.amur.it.js.foundation" xmlns:org.nasdanika.amur.it.js.lang="urn:org.nasdanika.amur.it.js.lang" xmlns:org.nasdanika.amur.lang="urn:org.nasdanika.amur.lang" xmi:id="_s24qICKgEeOqFe-fpl6Yvg" name="ErrorTransitionsFlow" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_8epj_o">
+  <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:TopLevelFlow" xmi:id="_uSuWACKgEeOqFe-fpl6Yvg" name="Top Level Flow" id="org.nasdanika.amur.it.js.TopLevelFlow" description="Top level flow contains other elements connected to each other." scriptFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows/ErrorHandling" resourceFolder="/org.nasdanika.amur.it.js.foundation.tests/WebContent/js/flows/ErrorHandling" skeleton="/org.nasdanika.amur.it.js.foundation.tests/flows/FlowSkeleton.js"/>
+  <children xmi:type="org.nasdanika.amur:InputPort" xmi:id="_Bwn5ICKhEeOqFe-fpl6Yvg" name="i1" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_bexz_r" outboundConnections="_Tbh0oCKhEeOqFe-fpl6Yvg _ZO6vkCKhEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionInputPort" xmi:id="_BwpuUCKhEeOqFe-fpl6Yvg" errorTransitionsOrder="_Tbh0oCKhEeOqFe-fpl6Yvg _ZO6vkCKhEeOqFe-fpl6Yvg">
+      <inputParameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_w4dzwCKhEeOqFe-fpl6Yvg" name="arg0"/>
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_3aqVcCKhEeOqFe-fpl6Yvg" text="throw arg0;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_3aqVcSKhEeOqFe-fpl6Yvg" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_P51PgCKhEeOqFe-fpl6Yvg" name="o1" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_dg6l_u" inboundConnections="_Tbh0oCKhEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_P53EsCKhEeOqFe-fpl6Yvg">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_W1Wv0CKkEeOqFe-fpl6Yvg" name="error"/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:ErrorTransition" xmi:id="_Tbh0oCKhEeOqFe-fpl6Yvg" name="conditional transition" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_dyfz_v" source="_Bwn5ICKhEeOqFe-fpl6Yvg" target="_P51PgCKhEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ErrorTransition" xmi:id="_Tbh0oSKhEeOqFe-fpl6Yvg">
+      <condition xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_o3xTwCKhEeOqFe-fpl6Yvg" text="error == &quot;et1&quot;">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_o3xTwSKhEeOqFe-fpl6Yvg" name="JavaScript" uid="javascript"/>
+      </condition>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:OutputPort" xmi:id="_VtnMACKhEeOqFe-fpl6Yvg" name="o2" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_ea9h_w" inboundConnections="_ZO6vkCKhEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:FunctionOutputPort" xmi:id="_VtnMASKhEeOqFe-fpl6Yvg">
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_Tr_bQCLdEeOqFe-fpl6Yvg" name="err"/>
+      <parameters xmi:type="org.nasdanika.amur.it.js:Parameter" xmi:id="_Tr_bQSLdEeOqFe-fpl6Yvg" name="arg1"/>
+    </implementationType>
+  </children>
+  <children xmi:type="org.nasdanika.amur:ErrorTransition" xmi:id="_ZO6vkCKhEeOqFe-fpl6Yvg" name="unconditional transition" id="DR8W_VRVK_5ZKZ_W8C1_LZ77_8F1R_3AN6_GNDV_eshq_x" source="_Bwn5ICKhEeOqFe-fpl6Yvg" target="_VtnMACKhEeOqFe-fpl6Yvg">
+    <implementationType xmi:type="org.nasdanika.amur.it.js.foundation:ErrorTransition" xmi:id="_ZO6vkSKhEeOqFe-fpl6Yvg">
+      <handler xmi:type="org.nasdanika.amur.lang:TextSource" xmi:id="_WeRVoCLdEeOqFe-fpl6Yvg" text="return this.target(error+&quot;!!!&quot;, 55);">
+        <language xmi:type="org.nasdanika.amur.it.js.lang:JavaScript" xmi:id="_WeR8sCLdEeOqFe-fpl6Yvg" name="JavaScript" uid="javascript"/>
+      </handler>
+    </implementationType>
+  </children>
+</org.nasdanika.amur:Node>

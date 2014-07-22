@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" type="Amur" name="unhandled.amur_diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" type="2007" fontName="Segoe UI">
+    <children xsi:type="notation:DecorationNode" type="5007"/>
+    <element href="unhandled.amur#_dIo04CC5EeOOiMQGkGpSrw"/>
+    <layoutConstraint xsi:type="notation:Bounds" x="103" y="143"/>
+  </children>
+  <styles xsi:type="notation:DiagramStyle"/>
+  <element href="unhandled.amur#_IKdKwCC5EeOOiMQGkGpSrw"/>
+</notation:Diagram>
