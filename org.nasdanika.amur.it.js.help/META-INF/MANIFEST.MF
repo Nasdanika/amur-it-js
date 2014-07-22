@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AmurJS Help
+Bundle-SymbolicName: org.nasdanika.amur.it.js.help;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Nasdanika
