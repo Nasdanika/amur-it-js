@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.nasdanika.amur.it.js.feature"
+      label="AmurJS"
+      version="1.0.0.qualifier"
+      provider-name="Nasdanika">
+
+   <description>
+      AmurJS
+   </description>
+
+   <copyright>
+      Copyright (c) 2012 Nasdanika LLC. All rights reserved.
+   </copyright>
+
+   <license>
+      Eclipse Public License.
+   </license>
+
+   <includes
+         id="org.nasdanika.amur.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.nasdanika.amur.lang.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js.lang"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js.lang.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js.help"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js.foundation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js.foundation.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.nasdanika.amur.it.js.foundation.help"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>
