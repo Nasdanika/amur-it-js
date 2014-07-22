@@ -1,0 +1,533 @@
+<%@ jet 
+	package="org.nasdanika.amur.it.js.renderers" 
+	imports="org.nasdanika.amur.it.js.* org.nasdanika.amur.it.js.impl.* java.util.*" 
+	class="FactoryRenderer" 
+	skeleton="Renderer.skeleton"		
+%>
+
+/**
+ * Creates a component instance
+ * Wrap in define()/require() as needed
+ * @param $facade - facade which provides outputs and other configuration
+ * and to which component inputs are bound when component is startd.
+ *  
+ *  All component-related ('special') variables start with $ to avoid clash with user-defined variables.
+ */
+function <%=context.get("component.name")%>Factory($promiseProvider, $facade, $config, $outputs) {
+
+	if (!$promiseProvider) {
+		// Use global/contextual Q if promise provider is not defined.
+		$promiseProvider = Q;
+	}
+	
+	if (!$facade) {
+		$facade = {};
+	}
+	
+	/**
+	 * Delay and other promises to wait on before stopping flow
+	 */
+	var $registeredPromises = [];
+	
+	var $timeouts = [];
+	
+	/**
+	 * Interval ID's to cancel intervals when flow stops
+	 */
+	var $intervals = [];
+	
+	/**
+	 * Registers a promise. $stop() method waits for registered promises
+	 * to be fulfilled before stopping the component.
+	 */
+	var $registerPromise = function $registerPromise(promise) {
+		if (promise) {
+			var $pidx = $registeredPromises.length;
+			$registeredPromises[$pidx] = promise;
+			promise.fin(function() {
+				delete $registeredPromises[$pidx];
+			}); 
+			return $pidx;
+		}
+	};
+	
+	// Returns a function which wraps 'f' function bound to 'bindTo' and invokes it with a delay 'period'.
+	// The returned function returns a promise which is fulfilled by the return value of the delayed function
+	// 'f' after it is invoked. Delayed promises are registered, i.e. facade.$stop() waits for their fulfillment.
+	// period shall be either a number or a function returning number. If period is a function it is invoked with the same bindTo and arguments as the target function.
+	// Returned promise has cancel() method to cancel delayed execution.
+	var $delay = $config && typeof $config.delay == 'function' ? $config.delay : function $delay(f, bindTo, period) {
+		return function() {
+			var args = arguments;
+			var deferred = $promiseProvider.defer();
+			var $rIdx = $registerPromise(deferred.promise);
+			
+			if (typeof period == 'function') {
+				period = period.apply(bindTo, args);
+			}
+			
+			if (typeof period != 'number') {
+				throw "Period is not a number: "+period;
+			}
+			
+			var $timeoutKey = setTimeout(function() { 
+					try {
+						deferred.resolve(f.apply(bindTo, args)); 
+					} catch (e) {
+						deferred.reject(e);
+					}
+				}, 
+				period);						
+
+			var ret = deferred.promise;
+			
+			ret.cancel = function() {
+					clearTimeout($timeoutKey);
+					delete $registeredPromises[$rIdx];
+			};
+			
+			return ret;
+		};
+	};
+	
+	// Returns a function which wraps 'f' function bound to 'bindTo' and invokes it with a delay 'period'.
+	// The returned function returns a promise which is fulfilled by the return value of the delayed function
+	// 'f' after it is invoked. The promise returned has cancel() method which clears timeout.
+	var $timeout = $config && typeof $config.timeout == 'function' ? $config.timeout : function $timeout(f, bindTo, period) {
+		return function() {
+			var args = arguments;
+			var deferred = $promiseProvider.defer();
+			var $tidx = $timeouts.length;
+			
+			if (typeof period == 'function') {
+				period = period.apply(bindTo, args);
+			}
+			
+			if (typeof period != 'number') {
+				throw "Period is not a number: "+period;
+			}
+			
+			var $timeoutKey = setTimeout(function() { 
+				try {
+					deferred.resolve(f.apply(bindTo, args)); 
+				} catch (e) {
+					deferred.reject(e);
+				} finally {
+					delete $timeouts[$tidx];
+				}
+			}, 
+			period);
+				
+			$timeouts[$tidx] = $timeoutKey;
+			
+			var ret = deferred.promise;
+			
+			ret.cancel = function() {
+					clearTimeout($timeoutKey);
+					delete $timeouts[$tidx];
+			};
+			
+			return ret;
+		};
+	};	
+	
+	// Returns a function which wraps 'f' function bound to 'bindTo' and invokes it with interval 'period'.
+	// The returned function returns a promise which is notified with the return value of each scheduled invocation 
+	// of function 'f'. The promise returned has cancel() method which clears interval.
+	var $schedule = $config && typeof $config.schedule == 'function' ? $config.schedule : function $schedule(f, bindTo, period) {
+		return function() {
+			var args = arguments;
+			var deferred = $promiseProvider.defer();
+			var idx = $intervals.length;
+			
+			if (typeof period == 'function') {
+				period = period.apply(bindTo, args);
+			}
+			
+			if (typeof period != 'number') {
+				throw "Period is not a number: "+period;
+			}
+				
+			var intervalKey = setInterval(function() { 
+				try {
+					deferred.notify(f.apply(bindTo, args)); 
+				} catch (e) {
+					deferred.reject(e);
+				}
+			}, 
+			period);
+				
+			$intervals[idx] = intervalKey;
+
+			var ret = deferred.promise;
+						
+			ret.cancel = function() {
+					clearInterval(intervalKey);
+					delete $intervals[idx];
+			};
+			
+			return ret;
+		};
+	};	
+	
+	var $nextTick = $config && typeof $config.nextTick == 'function' ? $config.nextTick : function $nextTick(f, bindTo) {
+		return $delay(f, bindTo, 0);
+	};
+	
+	// Wrapper function for logging exceptions. Useful for troubleshooting.
+	var $logError = $config && typeof $config.logError == 'function' ? $config.logError : function $logError(f, bindTo) {
+		return function() {
+			try {
+				return f.apply(bindTo, arguments);
+			} catch (e) {
+				console.error(e);
+				throw e;
+			}
+		};		
+	};
+	
+	var maxInvocationDepth = $config && $config.maxInvocationDepth || 10000;
+	
+	var $invocationCounter = 0;
+	
+	var $createInvocation = $config && typeof $config.createInvocation == 'function' ? $config.createInvocation : function $createInvocation(parentInvocations) {
+		var invocation = {
+			created : new Date(),
+			children : [],
+			depth : 0,
+			id : $invocationCounter++
+		};
+		
+		if (parentInvocations) {
+			invocation.parents = parentInvocations;
+			for (var i=0; i<parentInvocations.length; ++i) {
+				parentInvocations[i].children.push(invocation);
+				if (parentInvocations[i].depth+1>invocation.depth) {
+					invocation.depth = parentInvocations[i].depth+1;
+				}
+			}	
+			if (invocation.depth>maxInvocationDepth) {
+				throw "Invocation depth exceeds "+maxInvocationDepth+", possibly an infinite loop";
+			}
+		}
+		
+		return invocation;
+	};
+	
+	/**
+	 * Wraps f function and returns function which tokenizes argument at argIdx. 
+	 * If argument at argIdx is array then resulting function iterates over elements and returns
+	 * array of return values from individual invocation.
+	 * if argument at argIdx is object then resulting function iterates over object keys and
+	 * returns an object with individual return values corresponding to keys.
+	 * Otherwise argument is passed as-is. 
+	 */
+	var $tokenize = $config && typeof $config.tokenize == 'function' ? $config.tokenize : function $tokenize(f, argIdx) {
+		return function tokenized() {
+			if (arguments.length>argIdx && typeof arguments[argIdx] == "object") {
+				var args = [];
+				for (var i in arguments) {
+					args[i] = arguments[i];
+				}
+				var ret = Array.isArray(arguments[argIdx]) ? [] : {};
+				for (var i in arguments[argIdx]) {
+					args[argIdx]=arguments[argIdx][i];
+					ret[i]=f.apply(this, args);
+				}
+				return ret;
+			}
+			return f.apply(this, arguments);
+		};
+	};
+	
+	/* Extend function. Uses jQuery.extend if available. Uses implementation factored out from jQuery 2 otherwise. */
+	var extend = $config && typeof $config.extend === "function" ? $config.extend : function() {
+		var options, name, src, copy, copyIsArray, clone,
+			target = arguments[0] || {},
+			i = 1,
+			length = arguments.length,
+			deep = false;
+	
+		// Handle a deep copy situation
+		if ( typeof target === "boolean" ) {
+			deep = target;
+	
+			// skip the boolean and the target
+			target = arguments[ i ] || {};
+			i++;
+		}
+	
+		// Handle case when target is a string or something (possible in deep copy)
+		if ( typeof target !== "object" && typeof target !== "function") {
+			target = {};
+		}
+	
+		// extend jQuery itself if only one argument is passed
+		if ( i === length ) {
+			target = this;
+			i--;
+		}
+	
+		for ( ; i < length; i++ ) {
+			// Only deal with non-null/undefined values
+			if ( (options = arguments[ i ]) != null ) {
+				// Extend the base object
+				for ( name in options ) {
+					src = target[ name ];
+					copy = options[ name ];
+	
+					// Prevent never-ending loop
+					if ( target === copy ) {
+						continue;
+					}
+	
+					// Recurse if we're merging plain objects or arrays
+					if ( deep && copy && ( typeof copy === "object" || (copyIsArray = Array.isArray(copy)) ) ) {
+						if ( copyIsArray ) {
+							copyIsArray = false;
+							clone = src && Array.isArray(src) ? src : [];
+	
+						} else {
+							clone = src && typeof src === "object" ? src : {};
+						}
+	
+						// Never move original objects, clone them
+						target[ name ] = extend( deep, clone, copy );
+	
+					// Don't bring in undefined values
+					} else if ( copy !== undefined ) {
+						target[ name ] = copy;
+					}
+				}
+			}
+		}
+	
+		// Return the modified object
+		return target;
+	};
+	
+	/**
+	 * Extend function used by clone(). Uses jQuery.extend() if available
+	 */
+	var $clone = $config && typeof $config.clone == 'function' ? $config.clone : function $clone(o, deep) {	
+		return deep ? extend(true, {}, o) : extend({}, o);
+	};
+	
+	/**
+	 * Performs join.
+	 * @param inputName This input name
+	 * @param collectors - a hash of arrays. 
+	 * Each element in array is an object with invocation property, and promise to notify of joins/consumption.
+	 * @param conditions Array of condition functions. Conditions are invoked with the same parameters as
+	 * handler and can consume inputs.
+	 * @param handler Handler to invoke on successful join. Handler return value is dispatched to inputs as a progress
+	 * notification.
+	 * @param outer Perform outer join if true. 
+	 * @param argMapper Optional function which maps join arguments to condition and handler arguments.
+	 */
+	var $join = $config && typeof $config.join == 'function' ? $config.join : function $join(
+			inputName, 
+			inputData,
+			collectors, 
+			contextFactory, 
+			conditions, 
+			handler, 
+			outer, 
+			argMapper) {
+			
+		if (collectors) {					
+			var inputIdx = collectors[inputName].length;
+			var inputEntry = $promiseProvider.defer();
+			collectors[inputName].push(inputEntry);
+			
+			// Consumes entry 
+			inputEntry.consume = function() {
+				delete collectors[inputName][inputIdx];
+				this.resolve(true);
+				this.consumed = true;
+			};
+			
+			inputEntry.data = inputData;
+			
+			var collectorNames = [];				
+			for (var i in collectors) {
+				collectorNames.push(i);
+			}
+			
+			// Joins inputs
+			function _join(collectorIdx, collected) {		
+				if (collectorIdx==collectorNames.length) {
+					var context = contextFactory && contextFactory(collected);
+					var jArgs = typeof argMapper == 'function' ? argMapper(collected) : collected;
+					if (conditions) {
+						for (var ci in conditions) {
+							if (conditions[ci]) {
+								var cr = conditions[ci].apply(context, jArgs);
+								if (!cr) {
+									return;
+								}
+							}
+						}
+					}
+					
+					for (var c in collected) {
+						if (collected[c] && collected[c].consumed) {
+							return;
+						}
+					}
+					
+					// Collected all, invoke handler.
+					var result = handler.apply(context, jArgs);
+					for (var c in collected) {
+						if (collectorNames[c] == inputName) {
+							if (!collected[c].promise.results) {
+								collected[c].promise.results = [];
+							}
+							collected[c].promise.results.push(result);
+						} else if (collected[c] && typeof collected[c].notify == 'function') {
+							collected[c].notify(result); // Notifying promises of a join result.
+						}
+					}
+				} else if (collectorNames[collectorIdx] == inputName) {
+					collected[collectorIdx] = inputEntry;
+					_join(collectorIdx+1, collected);
+				} else {
+					if (outer) {
+						collected[collectorIdx]=null;
+						_join(collectorIdx+1, collected);
+						for (var i=0; i<=collectorIdx; ++i) {
+							if (collected[i] && collected[i].consumed) {
+								return;
+							}
+						}
+					}
+					
+					for (var c in collectors[collectorNames[collectorIdx]]) {
+						collected[collectorIdx]=collectors[collectorNames[collectorIdx]][c];
+						if (!collected[collectorIdx].consumed) {
+							_join(collectorIdx+1, collected);
+							for (var i=0; i<=collectorIdx; ++i) {
+								if (collected[i] && collected[i].consumed) {
+									return;
+								}
+							}
+						}
+					}						
+				}
+			}
+			
+			_join(0, []);
+			
+			return inputEntry.promise;
+		}
+		
+		console.warn("Cannot join - no collectors");
+	};
+	
+	/**
+	 * Join argument is a deferred with invocation as data, mapped argument is an object with invocation's data as data and consume() function.
+	 */
+	var $joinArgsMapper = $config && typeof $config.joinArgsMapper == 'function' ? $config.joinArgsMapper : function $joinArgsMapper(args) {
+		var ret = [];
+		for (var i in args) {
+			ret.push(args[i] && { data : args[i].data.data, consume : args[i].consume.bind(args[i]) });
+		}
+		return ret;
+	};
+
+	/**
+	 * Retrieves join collectors from container. Creates if necessary.
+	 */
+	function $getJoinCollectors(container, property, inputNames) {
+		if (container) {
+			if (!container[property]) {
+				container[property] = {};
+				for (var i in inputNames) {
+					container[property][inputNames[i]] = [];
+				}
+			}
+			return container[property];
+		}
+	}
+	
+	/**
+	 * Traverses invocation parents to find a path to the join fork invocation
+	 * Invocation - invocation to start from.
+	 * Path - invocation path.
+	 */ 
+	function $traversePath(invocation, path) {
+		if (path.length==0) {
+			return invocation;
+		}
+		
+		if (invocation.parents) {
+			for (var p in invocation.parents) {
+				if (invocation.parents[p].path = path[0]) {
+					var ret = $traversePath(invocation.parents[p], path.slice(1));
+					if (ret) {
+						return ret;
+					}
+				}
+			}
+		}
+	}
+	
+	function $resolveInvocationJoinCollectors(invocation, paths) {
+		if (paths) {
+			for (var p in paths) {
+				var resolved = $traversePath(invocation, paths[p]);
+				if (resolved) {
+					if (!resolved.joinCollectors) {
+						resolved.joinCollectors = {};
+					}
+					return resolved.joinCollectors;
+				}			
+			}
+		}
+	}
+	
+	// Helper function to invoke $start/$stop in context of start/stop invocation
+	// returns a function which invockes f in context and 
+	// returns a promise of invocation for chaining.
+	function $invokeInContext(f, invocationName, component) {
+		return function(invocation) {
+			if (!invocation) {
+				throw "Invocation is mandatory";
+			}
+			var context = component.$createContext(invocationName, [invocation]);		
+			var fb = $config && $config.logErrors ? $logError(f, context) : f.bind(context);
+			return $promiseProvider.when(fb()).then(function() { return invocation; });
+		};	
+	} 
+		
+	// Components hierarchy
+	var $ajsComponent = <%=context.get("component.definition")%>;
+	
+	$ajsComponent.$init();
+	
+	// TODO - merge state if $config.loadState(component) is function
+	// TODO - pass state to stop, if $config.storeState(component) is function
+	
+	$facade.$stop = function() {
+		// Clearing all intervals
+		for (var i in $intervals) {
+			clearInterval($intervals[i]);
+		}
+
+		// Clearing remaining timeouts
+		for (var i in $timeouts) {
+			clearTimeout($timeouts[i]);
+		}		
+			
+		// Wait for all delayed invocations to finish then stop.
+		var $stopInvocation = $createInvocation();
+		$stopInvocation.path='$facade.$stop';
+		$promiseProvider.allSettled($registeredPromises).then($ajsComponent.$children.$starter.$stopDeferred.resolve.bind($facade, $stopInvocation));
+		return $ajsComponent.$children.$starter.$stopPromise;
+	};
+
+	var $startInvocation = $createInvocation();
+	$startInvocation.path='start';
+	
+	return $ajsComponent.$children.$starter.$doStart($startInvocation).then(function() { return $facade; });	
+}

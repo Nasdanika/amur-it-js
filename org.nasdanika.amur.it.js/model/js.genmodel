@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.amur.it.js/src" creationIcons="false"
+    modelPluginID="org.nasdanika.amur.it.js" modelName="Js" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
+    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" reflectiveDelegation="true"
+    importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective" complianceLevel="7.0"
+    copyrightFields="false" usedGenPackages="../../org.nasdanika.amur/model/amur.genmodel#//amur platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.nasdanika.amur.lang/model/Lang.genmodel#//lang ../../org.nasdanika.party/model/party.genmodel#//party">
+  <foreignModel>js.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Js" basePackage="org.nasdanika.amur.it" disposableProviderFactory="true"
+      ecorePackage="js.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="js.ecore#//Cloning">
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//Cloning/None"/>
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//Cloning/Shallow"/>
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//Cloning/Deep"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="js.ecore#//Join">
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//Join/None"/>
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//Join/Inner"/>
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//Join/Outer"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="js.ecore#//JoinScope">
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//JoinScope/Flow"/>
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//JoinScope/Invocation"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="js.ecore#//ReferenceScope">
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//ReferenceScope/Component"/>
+      <genEnumLiterals ecoreEnumLiteral="js.ecore#//ReferenceScope/Invocation"/>
+    </genEnums>
+    <genClasses ecoreClass="js.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//Parameter/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//Parameter/token"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//Parameter/cloning"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="js.ecore#//PortDescriptor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//PortDescriptor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//PortDescriptor/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//PortDescriptor/type"/>
+    </genClasses>
+    <genClasses ecoreClass="js.ecore#//FunctionPortDescriptor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//FunctionPortDescriptor/thrownErrors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//FunctionPortDescriptor/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="js.ecore#//PropertyPortDescriptor"/>
+    <genClasses ecoreClass="js.ecore#//Component">
+      <genFeatures createChild="false" propertyCategory="Lifecycle" ecoreFeature="ecore:EReference js.ecore#//Component/declarations"/>
+      <genFeatures createChild="false" propertyCategory="Lifecycle" ecoreFeature="ecore:EReference js.ecore#//Component/start"/>
+      <genFeatures createChild="false" propertyCategory="Lifecycle" ecoreFeature="ecore:EReference js.ecore#//Component/stop"/>
+    </genClasses>
+    <genClasses ecoreClass="js.ecore#//Connection">
+      <genFeatures createChild="false" propertyCategory="Source" ecoreFeature="ecore:EAttribute js.ecore#//Connection/sourcePort"/>
+      <genFeatures createChild="false" propertyCategory="Source" ecoreFeature="ecore:EAttribute js.ecore#//Connection/sourceName"/>
+      <genFeatures createChild="false" propertyCategory="Target" ecoreFeature="ecore:EAttribute js.ecore#//Connection/targetPort"/>
+      <genFeatures createChild="false" propertyCategory="Target" ecoreFeature="ecore:EAttribute js.ecore#//Connection/targetName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="js.ecore#//AbstractNode">
+      <genFeatures createChild="false" propertyCategory="Join" propertyDescription=""
+          propertySortChoices="true" ecoreFeature="ecore:EReference js.ecore#//AbstractNode/inboundTransitionsOrder"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="General" propertySortChoices="true"
+          ecoreFeature="ecore:EReference js.ecore#//AbstractNode/outboundTransitionsOrder"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="General" propertySortChoices="true"
+          ecoreFeature="ecore:EReference js.ecore#//AbstractNode/errorTransitionsOrder"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="General" propertySortChoices="true"
+          ecoreFeature="ecore:EReference js.ecore#//AbstractNode/errorHandlersOrder"/>
+      <genFeatures createChild="false" propertyCategory="Join" propertySortChoices="true"
+          ecoreFeature="ecore:EReference js.ecore#//AbstractNode/joinConditions"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Join" propertySortChoices="true"
+          ecoreFeature="ecore:EReference js.ecore#//AbstractNode/joinFork"/>
+    </genClasses>
+    <genClasses ecoreClass="js.ecore#//JoinEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//JoinEntry/port"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//JoinEntry/conditions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="js.ecore#//AbstractCall"/>
+    <genClasses image="false" ecoreClass="js.ecore#//AbstractTransition"/>
+    <genClasses image="false" ecoreClass="js.ecore#//AbstractReference"/>
+    <genClasses image="false" ecoreClass="js.ecore#//AbstractErrorTransition"/>
+    <genClasses image="false" ecoreClass="js.ecore#//AbstractErrorHandler"/>
+    <genClasses image="false" ecoreClass="js.ecore#//AbstractEventListener"/>
+    <nestedGenPackages prefix="Exec" basePackage="org.nasdanika.amur.it.js" disposableProviderFactory="true"
+        ecorePackage="js.ecore#//exec">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="js.ecore#//exec/DependencyRole">
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/DependencyRole/Property"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/DependencyRole/Function"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/DependencyRole/Dispatch"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/DependencyRole/ErrorHandler"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/DependencyRole/EventSink"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/DependencyRole/None"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="js.ecore#//exec/OutputType">
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/OutputType/Synchronous"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/OutputType/NextTick"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/OutputType/Timeout"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/OutputType/Delay"/>
+        <genEnumLiterals ecoreEnumLiteral="js.ecore#//exec/OutputType/Interval"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="js.ecore#//exec/Initializer">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Initializer/javaScript"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Initializer/comment"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/Property">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Property/accessor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Property/mutator"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Property/mutatorParameterName"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/Function">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Function/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/Function/parameters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Function/body"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/Fragment">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Fragment/code"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/Array">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/Array/elements"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/Hash">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/Hash/entries"/>
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Hash/path"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/HashEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/HashEntry/key"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/HashEntry/value"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/Component">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Component/id"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/Component/inputs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/Component/outputs"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Component/weight"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Component/startLevel"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Component/forceable"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference js.ecore#//exec/Component/creator"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Component/startRoot"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/Component/startTerminal"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/DependencyEntry">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference js.ecore#//exec/DependencyEntry/key"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/DependencyEntry/value"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/DependencyInfo">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/weightCoeff"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/guard"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference js.ecore#//exec/DependencyInfo/parameters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/order"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/role"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/outputType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EReference js.ecore#//exec/DependencyInfo/code"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/referenceScope"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/joinType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/DependencyInfo/joinConditions"/>
+      </genClasses>
+      <genClasses ecoreClass="js.ecore#//exec/CodeEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/CodeEntry/key"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute js.ecore#//exec/CodeEntry/value"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
