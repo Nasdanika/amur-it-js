@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AmurJS Foundation Help
+Bundle-SymbolicName: org.nasdanika.amur.it.js.foundation.help;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Nasdanika
+Require-Bundle: org.eclipse.help,
+ org.nasdanika.amur;bundle-version="1.0.0"

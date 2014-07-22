@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Examples" link_to="../org.nasdanika.amur.it.js.help/toc.xml#examples">
+     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:start" label="Foundation">
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:activity" label="Activity">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:error_handlers" label="Error Handlers">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:error_transitions" label="Error Transitions">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:events" label="Events">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:fork_join" label="Fork Join">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:join" label="Join">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:references" label="References">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:scheduled_transitions" label="Scheduled Transitions">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:simple" label="Simple">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:tokenize_clone" label="Tokenize and Clone">
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:transitions" label="Transitions">	     
+	     </topic>
+	     <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:examples:unhandled" label="Unhandled Error">
+	     </topic>
+     
+     </topic>
+</toc>

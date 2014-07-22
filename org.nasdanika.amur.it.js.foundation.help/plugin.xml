@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="input_port_toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="connection_source_toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="node_toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="error_handler_toc.xml"
+            primary="false">
+      </toc>
+      <toc
+            file="output_port_toc.xml"
+            primary="false">
+      </toc>
+      
+      <toc
+            file="call_toc.xml"
+            primary="false">
+      </toc>
+      
+      <toc
+            file="transition_toc.xml"
+            primary="false">
+      </toc>
+      
+      <toc
+            file="reference_toc.xml"
+            primary="false">
+      </toc>
+      
+      <toc
+            file="error_transition_toc.xml"
+            primary="false">
+      </toc>
+      
+      <toc
+            file="examples_toc.xml"
+            primary="false">
+      </toc>
+   </extension>
+</plugin>
