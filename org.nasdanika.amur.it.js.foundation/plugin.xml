@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated foundation -->
+      <package
+            uri="urn:org.nasdanika.amur.it.js.foundation"
+            class="org.nasdanika.amur.it.js.foundation.FoundationPackage"
+            genModel="model/foundation.genmodel"/>
+   </extension>
+   <extension
+         point="org.nasdanika.amur.implementation_type_action">
+      <implementation_type_action_with_progress
+            class="org.nasdanika.amur.it.js.gen.GenerateAction"
+            component="org.nasdanika.amur.Node"
+            id="generate-java-script"
+            implementationType="org.nasdanika.amur.it.js.foundation.TopLevelFlow"
+            name="Generate JavaScript">
+      </implementation_type_action_with_progress>
+      <implementation_type_action_with_progress
+            class="org.nasdanika.amur.it.js.foundation.impl.SuiteImpl$GenerationAction"
+            id="generate-java-script"
+            implementationType="org.nasdanika.amur.it.js.foundation.Suite"
+            name="Generate JavaScript">
+      </implementation_type_action_with_progress>
+   </extension>
+   <extension
+         point="org.nasdanika.amur.implementation_type_action">
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.Node"
+            id="org.nasdanika.amur.it.js.foundation.Activity"
+            implementationType="org.nasdanika.amur.it.js.foundation.Activity"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.Call"
+            id="org.nasdanika.amur.it.js.foundation.Call"
+            implementationType="org.nasdanika.amur.it.js.foundation.Call"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.ErrorHandler"
+            id="org.nasdanika.amur.it.js.foundation.ErrorHandler"
+            implementationType="org.nasdanika.amur.it.js.foundation.ErrorHandler"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.ErrorTransition"
+            id="org.nasdanika.amur.it.js.foundation.ErrorTransition"
+            implementationType="org.nasdanika.amur.it.js.foundation.ErrorTransition"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.ConnectionSource"
+            id="org.nasdanika.amur.it.js.foundation.EventListener"
+            implementationType="org.nasdanika.amur.it.js.foundation.EventListener"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.InputPort"
+            id="org.nasdanika.amur.it.js.foundation.FunctionInputPort"
+            implementationType="org.nasdanika.amur.it.js.foundation.FunctionInputPort"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.OutputPort"
+            id="org.nasdanika.amur.it.js.foundation.FunctionOutputPort"
+            implementationType="org.nasdanika.amur.it.js.foundation.FunctionOutputPort"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.InputPort"
+            id="org.nasdanika.amur.it.js.foundation.PropertyInputPort"
+            implementationType="org.nasdanika.amur.it.js.foundation.PropertyInputPort"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.OutputPort"
+            id="org.nasdanika.amur.it.js.foundation.PropertyOutputPort"
+            implementationType="org.nasdanika.amur.it.js.foundation.PropertyOutputPort"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.Reference"
+            id="org.nasdanika.amur.it.js.foundation.Reference"
+            implementationType="org.nasdanika.amur.it.js.foundation.Reference"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.Transition"
+            id="org.nasdanika.amur.it.js.foundation.ScheduledTransition"
+            implementationType="org.nasdanika.amur.it.js.foundation.ScheduledTransition"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.Node"
+            id="org.nasdanika.amur.it.js.foundation.Suite"
+            implementationType="org.nasdanika.amur.it.js.foundation.Suite"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.Node"
+            id="org.nasdanika.amur.it.js.foundation.TopLevelFlow"
+            implementationType="org.nasdanika.amur.it.js.foundation.TopLevelFlow"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            component="org.nasdanika.amur.Transition"
+            id="org.nasdanika.amur.it.js.foundation.Transition"
+            implementationType="org.nasdanika.amur.it.js.foundation.Transition"
+            name="Context Help">
+      </implementation_type_action>
+      <implementation_type_action
+            class="org.nasdanika.amur.impl.ContextHelpImplementationTypeAction"
+            id="org.nasdanika.amur.it.js.foundation.GenericNode"
+            implementationType="org.nasdanika.amur.it.js.foundation.GenericNode"
+            name="Context Help">
+      </implementation_type_action>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+
+</plugin>

@@ -1,0 +1,10 @@
+
+import org.nasdanika.amur.it.js.exec.*;
+
+public class CLASS {
+
+
+public String generate(org.nasdanika.amur.it.js.exec.Component execComponent, java.util.Map<Object, Object> context) {
+     return "";
+   }
+ }

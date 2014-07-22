@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.amur.it.js.foundation/src" creationIcons="false"
+    editDirectory="/org.nasdanika.amur.it.js.foundation.edit/src" editorDirectory="/org.nasdanika.amur.it.js.foundation.editor/src"
+    modelPluginID="org.nasdanika.amur.it.js.foundation" modelName="Foundation" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
+    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" reflectiveDelegation="true"
+    importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective" complianceLevel="7.0"
+    copyrightFields="false" editPluginID="org.nasdanika.amur.it.js.foundation.edit"
+    editorPluginID="org.nasdanika.amur.it.js.foundation.editor" usedGenPackages="../../org.nasdanika.amur/model/amur.genmodel#//amur platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.nasdanika.amur.it.js/model/js.genmodel#//js ../../org.nasdanika.amur.lang/model/Lang.genmodel#//lang ../../org.nasdanika.party/model/party.genmodel#//party">
+  <foreignModel>foundation.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Foundation" basePackage="org.nasdanika.amur.it.js" disposableProviderFactory="true"
+      ecorePackage="foundation.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="foundation.ecore#//ScheduledTransitionType">
+      <genEnumLiterals ecoreEnumLiteral="foundation.ecore#//ScheduledTransitionType/Timeout"/>
+      <genEnumLiterals ecoreEnumLiteral="foundation.ecore#//ScheduledTransitionType/Delay"/>
+      <genEnumLiterals ecoreEnumLiteral="foundation.ecore#//ScheduledTransitionType/Interval"/>
+    </genEnums>
+    <genClasses ecoreClass="foundation.ecore#//Call">
+      <genFeatures createChild="false" propertyCategory="Source" ecoreFeature="ecore:EReference foundation.ecore#//Call/parameters"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Call/handler"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//Transition">
+      <genFeatures createChild="false" propertyCategory="General" propertyDescription=""
+          ecoreFeature="ecore:EReference foundation.ecore#//Transition/condition"/>
+      <genFeatures createChild="false" propertyCategory="Source" ecoreFeature="ecore:EReference foundation.ecore#//Transition/parameters"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Transition/handler"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//Transition/dispatch"/>
+      <genFeatures createChild="false" propertyCategory="Target" ecoreFeature="ecore:EAttribute foundation.ecore#//Transition/joinType"/>
+      <genFeatures createChild="false" propertyCategory="Target" ecoreFeature="ecore:EReference foundation.ecore#//Transition/outputParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//ScheduledTransition">
+      <genFeatures createChild="false" propertyCategory="Scheduling" propertyDescription=""
+          ecoreFeature="ecore:EAttribute foundation.ecore#//ScheduledTransition/type"/>
+      <genFeatures createChild="false" propertyCategory="Scheduling" propertyDescription=""
+          ecoreFeature="ecore:EReference foundation.ecore#//ScheduledTransition/period"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//Reference">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//Reference/scope"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Reference/accessor"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Reference/mutator"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//ErrorTransition">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//ErrorTransition/condition"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//ErrorTransition/handler"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//ErrorHandler">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//ErrorHandler/condition"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//ErrorHandler/handler"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//EventListener">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//EventListener/condition"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//EventListener/handler"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//TopLevelFlow">
+      <genFeatures createChild="false" propertyCategory="Generation" ecoreFeature="ecore:EAttribute foundation.ecore#//TopLevelFlow/scriptFolder"/>
+      <genFeatures createChild="false" propertyCategory="Generation" propertyDescription=""
+          ecoreFeature="ecore:EAttribute foundation.ecore#//TopLevelFlow/resourceFolder"/>
+      <genFeatures createChild="false" propertyCategory="Generation" ecoreFeature="ecore:EAttribute foundation.ecore#//TopLevelFlow/skeleton"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//PropertyInputPort">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//PropertyInputPort/accessor"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//PropertyInputPort/mutator"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//FunctionInputPort">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//FunctionInputPort/inputParameters"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//FunctionInputPort/handler"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//PropertyOutputPort"/>
+    <genClasses ecoreClass="foundation.ecore#//FunctionOutputPort">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//FunctionOutputPort/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//Activity">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Activity/inputParameters"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Activity/handler"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//Suite">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//Suite/components"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//GenericNode">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//GenericNode/icon"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//GenericNode/image"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//ObjectNode">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//ObjectNode/scope"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//ObjectNode/selector"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//UserTask">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//UserTask/parameters"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//UserTask/presentation"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//UserTask/validation"/>
+      <genFeatures createChild="false" propertyCategory="General" propertyDescription=""
+          ecoreFeature="ecore:EReference foundation.ecore#//UserTask/action"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//SubFlow"/>
+    <genClasses ecoreClass="foundation.ecore#//Participant">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//Participant/scope"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Participant/selector"/>
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EReference foundation.ecore#//Participant/inputPorts"/>
+      <genFeatures createChild="false" propertyCategory="General" propertyDescription=""
+          ecoreFeature="ecore:EReference foundation.ecore#//Participant/outputPorts"/>
+    </genClasses>
+    <genClasses ecoreClass="foundation.ecore#//GenericContainer">
+      <genFeatures createChild="false" propertyCategory="General" ecoreFeature="ecore:EAttribute foundation.ecore#//GenericContainer/icon"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

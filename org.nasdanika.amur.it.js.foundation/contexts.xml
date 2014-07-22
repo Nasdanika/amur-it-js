@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contexts>
+   <context id="Activity" title="Activity">
+      <description>Activity is a default implementation type for Node notation element in Top Level Flow. It is a basic processing node. Its handler is executed when the activity receives an invocation from one of inputs. Handler code has access to activity outputs, which it invokes to perform its task.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:activity" label="Activity Documentation"/>
+   </context>
+   <context id="GenericNode" title="Generic Node">
+      <description>This implementation type is used for conceptual modeling during high level design phase. Generic Node allows to assign a custom icon and image to model elements.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:generic_node" label="Generic Node Documentation"/>
+   </context>
+   <context id="Call" title="Call">
+      <description>Call is a default implementation type for Call notation element in Top Level Flow. For this reason it has the same name and icon as its notation element. Call is generated as a function in the source context. The generated function synchronously invokes target&apos;s input.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:call" label="Call Documentation"/>
+   </context>
+   <context id="ErrorHandler" title="Error Handler">
+      <description>Error Handler is a default implementation type for Error Handler notation element in Top Level Flow. For this reason it has the same name and icon as its notation element. Error Handler is activated when one of its peer elements throws an error which is not handled by error transitions emanating from that element. Error Handler&apos;s handler has an implicit error parameter.
+
+To avoid infinite loops Error Handlers do not handle errors thrown by elements which can be reached from them through connections.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:error_handler" label="Error Handler Documentation"/>
+   </context>
+   <context id="ErrorTransition" title="Error Transition">
+      <description>Error Transition is a default implementation type for Error Transition notation element in Top Level Flow. For this reason it has the same name and icon as its notation element. Error Transition is activated when its source element throws an error. Error Transitions&apos;s handler has an implicit error parameter.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:error_transition" label="Error Transition Documentation"/>
+   </context>
+   <context id="EventListener" title="Event Listener">
+      <description>Event listener asynchronously receives and processes events published by its peers with $emitEvent() function.
+
+To avoid infinite loops Event Listeners do not receive events published by elements which can be reached from them through connections.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:event_listener" label="Event Listener Documentation"/>
+   </context>
+   <context id="FunctionInputPort" title="Function Input Port">
+      <description>Function Input Port is a default implementation type for Input port notation element in Top Level Flow.
+
+Function Input Port is bound to the facade object as a function. When client code invokes the function the port&apos;s handler code is executed.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:function_input_port" label="Function Input Port Documentation"/>
+   </context>
+   <context id="FunctionOutputPort" title="Function Output Port">
+      <description>Function Output Port is a default implementation type for Error Transition notation element in Top Level Flow. The port invokes facade&apos;s function with the same name as port&apos;s.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:function_output_port" label="Function Output Port Documentation"/>
+   </context>
+   <context id="PropertyInputPort" title="Property Input Port">
+      <description>Property Input Port is bound to the facade as a property. Port&apos;s accessor is executed when client code reads the facade property and port&apos;s mutator is executed when client code modifies the property.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:property_input_port" label="Property Input Port Documentation"/>
+   </context>
+   <context id="PropertyOutputPort" title="Property Output Port">
+      <description>Property Output Port provides access to a facade property. Property name is computed as port&apos;s name, if it is not blank, dot-concatenated with the target name of inbound connection which accesses the property.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:property_output_port" label="Property Output Port Documentation"/>
+   </context>
+   <context id="Reference" title="Reference">
+      <description>Reference is a default implementation type for Reference notation element in Top Level Flow. For this reason it has the same name and icon as its notation element.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:reference" label="Reference Documentation"/>
+   </context>
+   <context id="ScheduledTransition" title="Scheduled Transition">
+      <description>Scheduled transition allows to invoke its target either once with specified delay or multiple times at specified interval.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:scheduled_transition" label="Scheduled Transition Documentation"/>
+   </context>
+   <context id="Suite" title="Suite">
+      <description>Suite allows batch generation of AmurJS diagrams.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:suite" label="Suite Documentation"/>
+   </context>   
+   <context id="TopLevelFlow" title="Top Level Flow">
+      <description>Top Level Flow is an implementation type for the diagram element. It contributes “Generate JavaScript” menu item to the diagram element context menu, which is uses, as the name implies, for JavaScript generation.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:top_level_flow" label="Top Level Flow Documentation"/>
+   </context>
+   <context id="Transition" title="Transition">
+      <description>Transition is a default implementation type for Transition notation element in Top Level Flow. For this reason it has the same name and icon as its notation element.
+
+Transition&apos;s handler is executed asynchronously. The return value of transition invocation is a promise fulfilled with handler&apos;s return value. If transition handler is blank than a pass-through handler is generated which invokes transition&apos;s target.
+
+Transitions can be conditional. If transition&apos;s condition evaluates to false then transition invocation returns undefined.</description>
+      <topic href="http://www.nasdanika.com/wiki/doku.php?id=products:amur_js:foundation:transition" label="Transition Documentation"/>
+   </context>
+</contexts>
